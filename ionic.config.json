@@ -1,0 +1,7 @@
+{
+  "name": "redgistry",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div style="width: 90%;margin: auto;">
+    <h2 text-center margin-top>Sign Up</h2>
+    <h4 text-center margin-top>Please sign up to continue</h4>
+
+    <hr color="white" width="25%" size="50" align="left">
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+     <ion-input type="password"></ion-input>
+   </ion-item>
+
+  <ion-item>
+    <ion-label stacked style="width: 100%;">Confirm</ion-label>
+   <ion-input type="password"></ion-input>
+  </ion-item>
+
+
+   <div style="text-align: center;padding-top: 22px;">
+     <ion-button [routerLink]="['/tabs/tab1']" style="width: 100%;" color="tertiary">
+       Create account
+     </ion-button>
+   </div>
+  </div>
+</ion-content>

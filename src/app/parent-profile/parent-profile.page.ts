@@ -6,12 +6,8 @@ import {
 } from '@ionic/angular/standalone';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import Swiper from 'swiper';
 
-import { Navigation, Pagination } from 'swiper/modules';
 
-// Install Swiper modules
-Swiper.use([Navigation, Pagination]);
 
 @Component({
   selector: 'app-parent-profile',
@@ -35,10 +31,6 @@ export class ParentProfilePage implements OnInit {
   };
 
   ngOnInit() {
-//    const swiper = new Swiper('.swiper', {
-      // configure Swiper to use modules
-//      modules: [Navigation, Pagination],
-//    });
   }
 
 }

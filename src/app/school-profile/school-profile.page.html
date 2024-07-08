@@ -1,0 +1,347 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Northwestern University</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="banner-toolbar" style="max-height:200px!important;">
+    <div class="profile-image-container">
+      <img src="https://i.ibb.co/hM7VSDK/Screenshot-2024-07-07-at-7-04-17-AM.png" class="profile-image" alt="Profile Image">
+    </div>
+    <h2>Northwestern University</h2>
+    <div class="center-content">
+      <h4>Evanston, Illinois
+      </h4>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">4-Year Private University</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">In state Tuition</ion-col>
+        <ion-col size="6">$67,000</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">Undergraduate Enrollment</ion-col>
+        <ion-col size="6">8,659</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">Out of state Tuition</ion-col>
+        <ion-col size="6">$102,000</ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button>Following</ion-button>
+
+
+  </div>
+
+
+  <div>
+    <ion-segment (ionChange)="segmentChanged($event)" value="tab1">
+      <ion-segment-button value="tab1">
+        <ion-label>Posts</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tab2">
+        <ion-label>About</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tab3">
+        <ion-label>Affiliates</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tab4">
+        <ion-label>Groups</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tab5">
+        <ion-label>Events</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tab6">
+        <ion-label>Programs</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="tab-content">
+    <div *ngIf="selectedSegment === 'tab1'">
+      <!-- Content for Tab 1 -->
+      <ion-card>
+
+        <ion-item detail="true">
+          <ion-avatar slot="start">
+            <img alt="Silhouette of a person's head" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" />
+          </ion-avatar>
+          <ion-label>
+            Northwestern University
+            <p>1 hour ago</p>
+          </ion-label>
+        </ion-item>
+            
+        <ion-card-header>
+          <ion-card-title><h3>Dirt-powered fuel cell runs forever</h3></ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          New tech harvests energy from microbes in soil to power sensors, communications A Northwestern University-led team of researchers has developed a new fuel cell that harvests energy from microbes living in dirt.
+        </ion-card-content>
+    
+        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    
+        <div class="social-button-container">
+          <ion-button size="small" fill="clear" color="secondary">
+            <ion-icon slot="start" name="heart"></ion-icon>
+            333k
+          </ion-button>
+          <ion-button size="small" fill="clear" color="secondary">
+            <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
+            781
+          </ion-button>
+          <ion-button size="small" fill="clear" color="secondary">
+            <ion-icon slot="icon-only" name="bookmark"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card>
+    </div>
+
+    <div *ngIf="selectedSegment === 'tab2'">
+      <!-- Content for Tab 2 -->
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <h3>Summary</h3>
+          </ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          Northwestern University s a comprehensive research university that is deeply interdisciplinary across multiple schools and units. Our rigorous yet empathetic academic environment provides a robust mixture of theory and practice, with an emphasis on top-tier research, new knowledge, creative expression and practical application. northwestern provides both students and faculty exceptional opportunities for intellectual, personal, and professional growth in beautiful settings, With two campuses located on Lake Michigan: a 240-acre campus in Evanston, minutes North of Chicago, and a 25-acre campus in Downtown Chicago. If you are at Northwestern, you are part of an innovative, collaborative, and multidimensional community delivering an impact that is rare in higher education.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            <h3>At A Glance</h3>
+          </ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="6">Undergraduate Acceptance Rate</ion-col>
+                <ion-col size="6">67%</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="6">Undergraduate Enrollment</ion-col>
+                <ion-col size="6">8,659</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="6">Graduate Enrollment</ion-col>
+                <ion-col size="6">46%</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="6">In state Tuition</ion-col>
+                <ion-col size="6">$67,000</ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col size="6">Out of state Tuition</ion-col>
+                <ion-col size="6">$102,000</ion-col>
+              </ion-row>
+
+              <ion-row>
+                <ion-col size="6">Visit School Admissions Page</ion-col>
+                <ion-col size="6">Visit School Financial Aid Page</ion-col>
+              </ion-row>
+            <ion-row>
+              <ion-col size="6">Visit School Athletics Page</ion-col>
+              <ion-col size="6">School Rankings/Facts 2</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="12">633 Clark Ave, Evanston, IL, 60208</ion-col>
+            </ion-row>
+
+          </ion-grid>
+
+        </ion-card-content>
+      </ion-card>
+
+      <ion-list>
+        <ion-list-header>
+          <h3>Rankings</h3>
+        </ion-list-header>
+        <ion-item>
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">
+            2024 Rankings
+            <p>Schools are ranked according to their performance across a set of widely accepted indicators of excellence.</p>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">#9 in National Universities (tie)</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">#13 in Engineering Programs (doctorate) (tie)</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://i.ibb.co/z5zvNQq/Screenshot-2024-07-08-at-7-22-36-AM1.png" />
+      </ion-card>
+
+      <ion-card>
+        <ion-list>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="8">Graduation Rate</ion-col>
+              <ion-col size="4">87%</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="8">Students Who Borrowed (any loan type)</ion-col>
+              <ion-col size="4">29%</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="8">Average Debt At Graduation</ion-col>
+              <ion-col size="4">46%</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+      </ion-card>
+
+    </div>
+
+    <div *ngIf="selectedSegment === 'tab3'">
+      <!-- Content for Tab 3 -->
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Item 1</h2>
+            <p>Description for Item 1</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Action
+          </ion-button>
+        </ion-item>
+      
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Item 2</h2>
+            <p>Description for Item 2</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Action
+          </ion-button>
+        </ion-item>
+      
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Item 3</h2>
+            <p>Description for Item 3</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Action
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div *ngIf="selectedSegment === 'tab4'">
+      <!-- Content for Tab 3 -->
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Item 1</h2>
+            <p>Description for Item 1</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Action
+          </ion-button>
+        </ion-item>
+      
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Item 2</h2>
+            <p>Description for Item 2</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Action
+          </ion-button>
+        </ion-item>
+      
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>Item 3</h2>
+            <p>Description for Item 3</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Action
+          </ion-button>
+        </ion-item>
+      </ion-list>    </div>
+    <div *ngIf="selectedSegment === 'tab5'">
+      <!-- Content for Tab 5 -->
+       <ion-list>
+        <ion-item>
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+        </ion-item>
+       </ion-list>
+
+    </div>
+    <div *ngIf="selectedSegment === 'tab6'">
+      <!-- Content for Tab 6 -->
+       <ion-list>
+        <ion-item>AFRICAN STUDIES</ion-item>
+        <ion-item>AMERICAN STUDIES</ion-item>
+        <ion-item>ANTHROPOLOGY</ion-item>
+        <ion-item>APPLIED MATHEMATICS</ion-item>
+        <ion-item>ARABIC</ion-item>
+        <ion-item>ARCHITECTURAL ENGINEERING AND DESIGN</ion-item>
+
+       </ion-list>
+    </div>
+  </div>
+  
+</ion-content>

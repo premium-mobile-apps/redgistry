@@ -1,15 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-
+<ion-header>
+  <ion-toolbar class="banner-toolbar">
+    <div class="profile-image-container">
+      <ion-button fill="clear" [routerLink]="['/student-profile']" class="profile-image-button">
+        <img src="https://i.ibb.co/M61YYyy/jessica-pope.png" class="profile-image" alt="Profile Image">
+      </ion-button>
+    </div>
   </ion-toolbar>
 </ion-header>
-<link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css">
 
 <ion-content [fullscreen]="true">
   
   <ion-card>
 
-    <ion-item>
+    <ion-item button detail="true" [routerLink]="['/school-profile']">
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" />
       </ion-avatar>
@@ -29,23 +32,26 @@
 
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
 
-    <ion-button size="small">
-      <ion-icon slot="start" name="heart"></ion-icon>
-      333k
-    </ion-button>
-    <ion-button size="small">
-      <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
-      781
-    </ion-button>
-    <ion-button size="small">
-      <ion-icon slot="icon-only" name="bookmark"></ion-icon>
-    </ion-button>
+    <div class="social-button-container">
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="start" name="heart"></ion-icon>
+        333k
+      </ion-button>
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
+        781
+      </ion-button>
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="icon-only" name="bookmark"></ion-icon>
+      </ion-button>
+    </div>
+
 
   </ion-card>
     
   <ion-card>
 
-    <ion-item>
+    <ion-item button detail="true">
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" />
       </ion-avatar>
@@ -61,23 +67,25 @@
 
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
 
-    <ion-button size="small">
-      <ion-icon slot="start" name="heart"></ion-icon>
-      975k
-    </ion-button>
-    <ion-button size="small">
-      <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
-      538
-    </ion-button>
-    <ion-button size="small">
-      <ion-icon slot="icon-only" name="bookmark"></ion-icon>
-    </ion-button>
+    <div class="social-button-container">
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="start" name="heart"></ion-icon>
+        333k
+      </ion-button>
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
+        781
+      </ion-button>
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="icon-only" name="bookmark"></ion-icon>
+      </ion-button>
+    </div>
 
   </ion-card>
     
   <ion-card>
 
-    <ion-item>
+    <ion-item button detail="true">
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://asset.brandfetch.io/idcXdgjqLS/idI_JXDYNm.jpeg" />
       </ion-avatar>
@@ -97,17 +105,19 @@
 
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
 
-    <ion-button size="small">
-      <ion-icon slot="start" name="heart"></ion-icon>
-      702k
-    </ion-button>
-    <ion-button size="small">
-      <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
-      153
-    </ion-button>
-    <ion-button size="small">
-      <ion-icon slot="icon-only" name="bookmark"></ion-icon>
-    </ion-button>
+    <div class="social-button-container">
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="start" name="heart"></ion-icon>
+        333k
+      </ion-button>
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
+        781
+      </ion-button>
+      <ion-button size="small" fill="clear" color="secondary">
+        <ion-icon slot="icon-only" name="bookmark"></ion-icon>
+      </ion-button>
+    </div>
 
   </ion-card>
 

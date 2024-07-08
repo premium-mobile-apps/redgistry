@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>My Parent Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="banner-toolbar" style="max-height:200px!important;">
+    <div class="profile-image-container">
+      <img src="https://i.ibb.co/hM7VSDK/Screenshot-2024-07-07-at-7-04-17-AM.png" class="profile-image" alt="Profile Image">
+    </div>
+    <h2>Catherine Pope</h2>
+    <div class="center-content">
+      <h4>Alumni at Northwestern University
+       <!--<ion-button class="profile-button" fill="clear" size="large" [routerLink]="['/school-profile']" routerDirection="forward">Northwestern University</ion-button>--> 
+      </h4>
+    </div>
+    <p>Ph.D, Computer Science</p>
+    <p>Chicago, IL</p>
+
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h3>Biography</h3>
+      </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus dolor, aliquet et facilisis sed, imperdiet vel quam. Vestibulum sed lacus id nibh tincidunt rutrum. Quisque eget justo placerat, malesuada ligula a, tincidunt ante. Aenean ut accumsan elit, eget aliquet ligula. Donec id nulla magna.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h3>My Students</h3>
+      </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content class="scroll-container">
+
+      <div class="scroll-item">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title><h4>Jessica Pope</h4></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img alt="Silhouette of mountains" src="https://i.ibb.co/M61YYyy/jessica-pope.png" style="background-color: white;"/>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="scroll-item">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title><h4>Student 2</h4></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img alt="Silhouette of mountains" src="https://i.ibb.co/WfFZwbn/student-2.png" style="background-color: white;"/>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <div class="scroll-item">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title><h4>Student 3</h4></ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img alt="Silhouette of mountains" src="https://i.ibb.co/JsVVTn2/student-3.png" style="background-color: white;"/>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h3>School Affiliations</h3>
+      </ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list class="school-affiliation">
+        <ion-item class="school-item" button detail="true" routerLink="/school-profile" routerDirection="forward">
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif"/>
+          </ion-thumbnail>
+          <ion-badge slot="end">Alumni</ion-badge>
+          <ion-label style="margin-left: 8px;">Northwestern University</ion-label>
+        </ion-item>
+        <ion-item button detail="true">
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" style="background-color: white;"/>
+          </ion-thumbnail>
+          <ion-label style="margin-left: 8px;">Stanford University</ion-label>
+        </ion-item>
+        <ion-item button detail="true">
+          <ion-thumbnail>
+            <img alt="Silhouette of mountains" src="https://asset.brandfetch.io/idcXdgjqLS/idI_JXDYNm.jpeg"/>
+          </ion-thumbnail>
+          <ion-badge slot="end">Alumni</ion-badge>
+          <ion-label style="margin-left: 8px;">Purdue University</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -30,4 +30,16 @@ export const routes: Routes = [
     path: 'tab5',
     loadComponent: () => import('./tab5/tab5.page').then( m => m.Tab5Page)
   },
+  {
+    path: 'student-profile',
+    loadComponent: () => import('./student-profile/student-profile.page').then( m => m.StudentProfilePage)
+  },
+  {
+    path: 'school-profile',
+    loadComponent: () => import('./school-profile/school-profile.page').then( m => m.SchoolProfilePage)
+  },
+  {
+    path: 'parent-profile',
+    loadComponent: () => import('./parent-profile/parent-profile.page').then( m => m.ParentProfilePage)
+  },
 ];

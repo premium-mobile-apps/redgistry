@@ -1,0 +1,28 @@
+ion-toolbar {
+    --background: url(https://i.ibb.co/qsknn8k/profile-heading.jpg) no-repeat fixed center / cover; 
+    --min-height:200px!important;
+
+ }
+
+.profile-image-container {
+    top: 70px; /* Adjust based on your toolbar height */
+    left: 16px;
+  }
+  
+  .profile-image {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid white; /* Optional: border to highlight the profile image */
+  }
+
+  .social-button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adjust the gap as needed */
+    text-align: center;
+  }
+  
+  .social-button-container ion-button {
+    flex: 1;
+  }

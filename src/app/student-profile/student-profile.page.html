@@ -5,24 +5,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="banner-toolbar" style="max-height:200px!important;">
+  <div class="banner-toolbar" style="max-height:100px!important;">
     <div class="profile-image-container">
       <img src="https://i.ibb.co/M61YYyy/jessica-pope.png" class="profile-image" alt="Profile Image">
     </div>
-    <h2>Jessica Pope</h2>
-    <div class="center-content">
-      <h4>Walter Payton College Preparatory
-       <!--<ion-button class="profile-button" fill="clear" size="large" [routerLink]="['/school-profile']" routerDirection="forward">Northwestern University</ion-button>--> 
-      </h4>
-    </div>
+    <h1 style="font-style: italic;"><strong>Jessica Pope</strong></h1>
+    <h4 style="font-style: italic;"><strong>Walter Payton College Preparatory</strong>
+      <!--<ion-button class="profile-button" fill="clear" size="large" [routerLink]="['/school-profile']" routerDirection="forward">Northwestern University</ion-button>--> 
+    </h4>
     <p>Sophomore</p>
     <p>Chicago, IL</p>
   </div>
 
-  <ion-card>
+  <div class="nav-menu">
+    <a href="#" data-target="summary" (click)="scrollToSection($event)">Summary</a>
+    <a href="#" data-target="achievements" (click)="scrollToSection($event)">Achievements</a>
+    <a href="#" data-target="activities" (click)="scrollToSection($event)">Activities</a>
+    <a href="#" data-target="experience" (click)="scrollToSection($event)">Experience</a>
+    <a href="#" data-target="skills" (click)="scrollToSection($event)">Skills</a>
+  </div>
+
+  <ion-card id="summary">
     <ion-card-header>
-      <ion-card-title>
-        <h3>Summary</h3>
+      <ion-card-title style="font-style: italic;">
+        <h3><strong>SUMMARY</strong></h3>
       </ion-card-title>
     </ion-card-header>
   
@@ -31,156 +37,198 @@
     </ion-card-content>
   </ion-card>
 
-<ion-list class="school-affiliation" lines="full">
-  <ion-list-header>
-    <h3>Academic Achievements & Rewards</h3>
-  </ion-list-header>
-  <ion-item>
-    <ion-label>
-      <strong>Scores</strong>
-      <ion-grid>
-        <ion-row>
-          <ion-col size="6">GPA:</ion-col>
-          <ion-col size="6">3.97</ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="6">Class Rank:</ion-col>
-          <ion-col size="6">9 of 571</ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="6">SAT Score:</ion-col>
-          <ion-col size="6">N/A</ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="6">ACT Score:</ion-col>
-          <ion-col size="6">32</ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-label>
-  </ion-item>
-  <ion-label style="margin-left: 15px;">
-    <strong>Award/Certification/Publication, Honor/Achievement</strong>
-  </ion-label>
-  <ion-item class="school-item">
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      National Honor Society
-      <p>Member, 2023</p>
-    </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      Illinois Math and Science Competition
-      <p>Runner Up, 2022</p>
-    </ion-label>
-  </ion-item>
-  <ion-label style="margin-left: 15px; margin-top: 10px;">
-    <strong>Additional Coursework</strong>
-  </ion-label>
-  <ion-item class="school-item">
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      Future Astronauts Program
-      <p>Chicago State University, Summer 2022</p>
-    </ion-label>
-  </ion-item>
-</ion-list>
+  <ion-card id="achievements">
+    <ion-list class="school-affiliation" lines="full">
+      <ion-list-header>
+        <h3 style="font-style: italic;text-transform: uppercase;"><strong>Academic Achievements & Awards</strong></h3>
+      </ion-list-header>
+      <ion-item>
+        <ion-label style="font-size: 18px;">
+          <strong><em>Scores</em></strong>
+          <ion-grid style="font-size: 15px!important;">
+            <ion-row>
+              <ion-col size="6">GPA:</ion-col>
+              <ion-col size="6">3.97</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">Class Rank:</ion-col>
+              <ion-col size="6">9 of 571</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">SAT Score:</ion-col>
+              <ion-col size="6">N/A</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">ACT Score:</ion-col>
+              <ion-col size="6">32</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-label>
+      </ion-item>
+      <ion-list-header style="font-style: italic;font-size: 18px;">
+        <strong>Award/Certification/Publication/Honor/Achievement</strong>
+      </ion-list-header>
+      <ion-item class="school-item">
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>National Honor Society</em>
+          <p>Member, 2023</p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>Illinois Math and Science Competition</em>
+          <p>Runner Up, 2022</p>
+        </ion-label>
+      </ion-item>
+      <ion-list-header style="font-style: italic;font-size: 18px;">
+        <strong>Additional Coursework</strong>
+      </ion-list-header>
+      <ion-item class="school-item">
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>Future Astronauts Program</em>
+          <p>Lake Forest College, Summer 2022</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
-<ion-list>
-  <ion-list-header>
-      <h3>Co-Curricular and Extracurricular Activities</h3>
-  </ion-list-header>
-  <ion-item class="school-item">
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      Alvin Ailey Dance Troupe, Chicago, Illinois
-      <p>Member 2022-2023</p>
-    </ion-label>
-  </ion-item>
-  <ion-item class="school-item">
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      Morgan Park High School Cheerleading, Chicago, Illinois
-      <p>Captain, 2022-2023; Member, 2021</p>
-    </ion-label>
-  </ion-item>
-  <ion-item class="school-item">
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      Morgan Park High School Cheerleading, Chicago, Illinois
-      <p>Member 2021</p>
-    </ion-label>
-  </ion-item>
-</ion-list>
+  <ion-card id="activities">
+    <ion-list>
+      <ion-list-header>
+          <h3 style="font-style: italic;text-transform: uppercase;"><strong>Co-Curricular and Extracurricular Activities</strong></h3>
+      </ion-list-header>
+      <ion-item class="school-item">
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>Alvin Ailey Dance Troupe, Chicago, Illinois</em>
+          <p>Member 2022-2023</p>
+        </ion-label>
+      </ion-item>
+      <ion-item class="school-item">
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>Morgan Park High School Cheerleading, Chicago, Illinois</em>
+          <p>Captain, 2022-2023; Member, 2021</p>
+        </ion-label>
+      </ion-item>
+      <ion-item class="school-item">
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>Morgan Park High School Cheerleading, Chicago, Illinois</em>
+          <p>Member 2021</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
-<ion-list>
-  <ion-list-header>
-      <h3>Work Experience/Community Service</h3>
-  </ion-list-header>
-  <ion-item class="school-item">
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      Northern Trust Bank and Trust Company
-      <p>Junior Teller, 2022-2023</p><br>
-      <p>- Make deposits, handle withdrawals and issue money orders or cashier's checks to bank customers</p>
-      <p>- Assist customers with other routine financial transactions</p>
-      <p>- Perform other relevant banking responsibilities as needed</p>
-    </ion-label>
-  </ion-item>
-  <ion-item class="school-item">
-    <ion-thumbnail>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
-    </ion-thumbnail>
-    <ion-label style="margin-left: 8px;">
-      Chicago Public Library
-      <p>Volunteer, 2022-2023</p><br>
-      <p>- Assist patrons with locate books and information, provide computer and printing support</p>
-      <p>- Assist with children's story times, art activities, and tutoring</p>
-      <p>- Assist with programs and events such as book clubs and home bound deliveries</p>
-    </ion-label>
-  </ion-item>
-</ion-list>
+  <ion-card id="experience">
+    <ion-list>
+      <ion-list-header>
+          <h3 style="font-style: italic;text-transform: uppercase;"><strong>Work Experience/Community Service</strong></h3>
+      </ion-list-header>
+      <ion-item class="school-item" style="align-items: flex-start;">
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>Northern Trust Bank and Trust Company</em>
+          <p>Junior Teller, 2022-2023</p><br>
+          <p>Make deposits, handle withdrawals and issue money orders or cashier's checks to bank customers</p>&nbsp;
+          <p>Assist customers with other routine financial transactions</p>&nbsp;
+          <p>Perform other relevant banking responsibilities as needed</p>
+        </ion-label>
+      </ion-item>
+      <ion-item class="school-item" style="align-items: flex-start;">
+        <ion-thumbnail>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" style="background-color: white;"/>
+        </ion-thumbnail>
+        <ion-label style="margin-left: 12px;">
+          <em>Chicago Public Library</em>
+          <p>Volunteer, 2022-2023</p><br>
+          <p>Assist patrons with locate books and information, provide computer and printing support</p>&nbsp;
+          <p>Assist with children's story times, art activities, and tutoring</p>&nbsp;
+          <p>Assist with programs and events such as book clubs and home bound deliveries</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 
-<ion-list>
-  <ion-list-header>
-      <h2>Skills/Interests and Hobbies</h2>
-  </ion-list-header>
-  <ion-item>
-   <ion-label>
-    <strong>Skills</strong>
-    <ul>
-      <li>Quantum Mathematics</li>
-      <li>Computer Programming</li>
-      <li>Critical Thinking</li>
-      <li>Intellectual Curiosity</li>
-      <li>Spanish (Fluent)</li>
-      <li>Italian (Conversational)</li>
-    </ul>
-   </ion-label>
-  </ion-item>
-  <ion-item>
-    <ion-label>
-      <strong>Interests/Hobbies</strong>
-      <ul>
-        <li>Architecture</li>
-        <li>Stock Trading</li>
-        <li>Cryptocurrency</li>
-      </ul>
-    </ion-label>
-  </ion-item>
-</ion-list>
+  <ion-card id="skills" style="padding-bottom:100px;">
+    <ion-list>
+      <ion-list-header>
+          <h2 style="font-style: italic;text-transform: uppercase;"><strong>Skills and Interests/Hobbies</strong></h2>
+      </ion-list-header>
+      <ion-item>
+       <ion-label>
+        <strong><em>Skills</em></strong>
+        <ul>
+          <li>Quantum Mathematics</li>
+          <li>Computer Programming</li>
+          <li>Critical Thinking</li>
+          <li>Intellectual Curiosity</li>
+          <li>Spanish (Fluent)</li>
+          <li>Italian (Conversational)</li>
+        </ul>
+       </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <strong><em>Interests/Hobbies</em></strong>
+          <ul>
+            <li>Architecture</li>
+            <li>Stock Trading</li>
+            <li>Cryptocurrency</li>
+          </ul>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <div class="custom-tabs">
+    <ion-button [routerLink]="['/tabs/tab1']">
+      <div class="button-content">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab2']">
+      <div class="button-content">
+        <ion-icon name="school"></ion-icon>
+        <span>Schools</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab3']">
+      <div class="button-content">
+        <ion-icon name="menu"></ion-icon>
+        <span>Menu</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab4']">
+      <div class="button-content">
+        <ion-icon name="people"></ion-icon>
+        <span>Groups</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab5']">
+      <div class="button-content">
+        <ion-icon name="notifications"></ion-icon>
+        <span>Alerts</span>
+      </div>
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,6 +1,6 @@
 .banner-toolbar {
     background: url(https://i.ibb.co/qsknn8k/profile-heading.jpg) no-repeat fixed center / cover; 
-    margin-bottom: 275px;
+    margin-bottom: 225px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -12,48 +12,114 @@
 .profile-image {
     width: 100px; /* Adjust size as needed */
     height: 100px;
-    border-radius: 50%;
+    border-radius: 10px 40px;
     border: 3px solid white; /* Optional: border to highlight the profile image */
-    margin-top: 150px; /* Adjust based on your toolbar height */
+    margin-top: 50px; /* Adjust based on your toolbar height */
 }
 
 ion-title {
     text-align: center;
 }
 
-.center-content {
-    text-align: left;
+ion-card {
+width: 100%; /* Ensure the card spans full width */
+margin-left: 0;
+margin-right: 0;
 }
   
-.center-content h4 {
-    display: inline-flex;
-    align-items: center;
-    margin: auto;
-}
-
-ion-button.profile-button {
-    text-transform: none;
-    --padding-start: 4px;
-}
-
-ion-card-content.scroll-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px;
+  .custom-tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 0 10px;
+    z-index: 1000; /* Ensure it's above other content */
+    --ion-background-color: #fff; /* Optional: Override default background color */
   }
   
-  ion-card-content.scroll-container .scroll-item {
-    display: inline-block;
-    vertical-align: top;
+  .custom-tabs ion-button {
+    --padding-start: 0;
+    --padding-end: 0;
+    --border: none;
+    --background: none;
+    color: #4600ff;
+    font-size: 16px;
     text-align: center;
-    color: white;
-    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --box-shadow: none; /* Remove the shadow */
+
+  }
+
+  .button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  ion-card-content.scroll-container img {
+  .custom-tabs ion-button ion-icon {
+    font-size: 20px;
     display: block;
-    margin: 0 auto;
-    background-color: white;
-    width: 100px;
-    height: 100px;
+
+  }
+  
+  .custom-tabs ion-button span {
+    display: block;
+    font-size: 10px;
+    margin-top: 4px; /* Adjust as needed */
+    text-align: center; /* Center text horizontally */
+    text-transform: none;
+  }
+
+  
+  .nav-menu {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick to the top of the page */
+    z-index: 100; /* Ensure it stays above other content */
+    background-color: #fff; /* Background color to match the page */
+    padding: 10px 0; /* Padding around the navigation links */
+    border-bottom: 1px solid #ccc; /* Optional border for visual separation */
+    display: flex; /* Flexbox to align items */
+    justify-content: center; /* Center items horizontally */ 
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+  
+  .nav-menu a {
+    margin: 0 15px; /* Space between links */
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Text color */
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-size: 16px; /* Default font size */
+  }
+  
+  .nav-menu a:hover {
+    color: #4600ff; /* Change color on hover */
+  }
+
+  /* Responsive adjustments */
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .nav-menu {
+      padding: 8px 0; /* Adjust padding */
+      font-size: 14px; /* Reduce font size */
+    }
+    
+    .nav-menu a {
+      margin: 0 10px; /* Reduce space between links */
+    }
+  }
+  
+  @media (max-width: 480px) { /* Adjust this breakpoint as needed */
+    .nav-menu {
+      font-size: 12px; /* Further reduce font size */
+    }
+    
+    .nav-menu a {
+      margin: 0 5px; /* Further reduce space between links */
+    }
   }

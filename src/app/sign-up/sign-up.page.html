@@ -4,32 +4,77 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div style="width: 90%;margin: auto;">
-    <h2 text-center margin-top>Sign Up</h2>
-    <h4 text-center margin-top>Please sign up to continue</h4>
-
-    <hr color="white" width="25%" size="50" align="left">
+  <div style="width: 90%;margin: auto;" class="content">
+    <ion-thumbnail style="margin-left: auto;margin-right: auto;margin-top: 33px;margin-bottom: 33px;width: 125px;height: 125px;">
+      <img src="https://i.ibb.co/5kpLS6v/Redgistry-logo-blu-txt.png">
+    </ion-thumbnail>
+  
+    <h1 text-center margin-top>Sign up</h1>
+    <h4>Command the next step in your education.</h4>
 
     <ion-item>
-      <ion-label stacked>Email</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input placeholder="First Name"></ion-input>
+      <ion-input placeholder="Last Name"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label stacked>Password</ion-label>
-     <ion-input type="password"></ion-input>
-   </ion-item>
+      <ion-input  placeholder="Email" type="email"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label stacked style="width: 100%;">Confirm</ion-label>
-   <ion-input type="password"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-input label="Password" placeholder="Choose your password" type="password"></ion-input>
+    </ion-item>
 
-
-   <div style="text-align: center;padding-top: 22px;">
-     <ion-button [routerLink]="['/tabs/tab1']" style="width: 100%;" color="tertiary">
-       Create account
-     </ion-button>
-   </div>
+    <ion-item>
+      <ion-input label="Confirm Password" placeholder="Enter your password again" type="password"></ion-input>
+    </ion-item>
+  
+    <div style="text-align: center;padding-top: 15px;">
+      <ion-button style="width: 100%;" color="primary" [routerLink]="['/tabs/tab1']" size="large">
+        Sign up
+      </ion-button>
+    </div>
+  
+    <div style="padding-top: 18px;">
+    <p style="text-align: center;font-size: 18px;font-weight: 500;">Or sign up using</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" style="width: 100%;">
+            <ion-icon slot="start" name="logo-facebook" size="small"></ion-icon>
+            Facebook
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" style="width: 100%;">
+            <ion-icon slot="start" name="logo-google" size="small"></ion-icon>
+            Google
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" style="width: 100%;">
+            <ion-icon slot="start" name="logo-apple" size="small"></ion-icon>
+            Apple
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+  
+    <div class="center-content">
+      <p>Already have an account?
+        <a [routerLink]="['/login']" color="tertiary" class="sign-up-text-link"> Sign in</a>
+      </p>
+    </div>
+  
   </div>
+
+  <ion-footer class="ion-no-border welcome-footer">
+    <div class="center-content-footer">
+      <p>By creating an account, you agree to our
+        <a color="tertiary" class="footer-text-link"> User Agreement</a>
+      </p>
+    </div>
+  </ion-footer>
+  
 </ion-content>

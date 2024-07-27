@@ -1,14 +1,11 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true" class="content">
   <div style="width: 90%;margin: auto;" class="content">
-    <h2 text-center margin-top>Hey there!</h2>
-    <h4 text-center margin-top>Welcome back.</h4>
+    <ion-thumbnail style="margin-left: auto;margin-right: auto;margin-top: 33px;margin-bottom: 33px;width: 125px;height: 125px;">
+      <img src="https://i.ibb.co/5kpLS6v/Redgistry-logo-blu-txt.png">
+    </ion-thumbnail>
 
-    <hr color="white" width="25%" size="50" align="left">
+    <h1 text-center margin-top>Sign in</h1>
+    <h4>Command the next step in your education.</h4>
 
     <ion-item>
       <ion-label stacked>Email</ion-label>
@@ -17,19 +14,48 @@
 
     <ion-item>
       <ion-label stacked>Password</ion-label>
-     <ion-input type="password"></ion-input>
-   </ion-item>
+      <ion-input type="password"></ion-input>
+    </ion-item>
 
-   <p style="text-align: right;">Forgot Password?</p>
+    <p style="text-align: right;font-size: 18px;font-weight: 500;color: #7e4dff;">Forgot Password?</p>
 
-   <div style="text-align: center;padding-top: 22px;">
-     <ion-button style="width: 100%;" color="primary" [routerLink]="['/tabs/tab1']">
-       SIGN IN
-     </ion-button>
-     <ion-button style="width: 100%;" [routerLink]="['/sign-up']" color="secondary">
-       SIGN UP
-     </ion-button>
-   </div>
+    <div style="text-align: center;padding-top: 15px;">
+      <ion-button style="width: 100%;" color="primary" [routerLink]="['/tabs/tab1']" size="large">
+        Sign in
+      </ion-button>
+    </div>
+
+    <div style="padding-top: 18px;">
+    <p style="text-align: center;font-size: 18px;font-weight: 500;">Or sign in using</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" style="width: 100%;">
+            <ion-icon slot="start" name="logo-facebook" size="small"></ion-icon>
+            Facebook
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" style="width: 100%;">
+            <ion-icon slot="start" name="logo-google" size="small"></ion-icon>
+            Google
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" style="width: 100%;">
+            <ion-icon slot="start" name="logo-apple" size="small"></ion-icon>
+            Apple
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    </div>
+
+    <div class="center-content">
+      <p>New to the platform?
+        <a [routerLink]="['/sign-up']" class="login-text-link"> Sign up</a>
+      </p>
+    </div>
+
   </div>
-
 </ion-content>

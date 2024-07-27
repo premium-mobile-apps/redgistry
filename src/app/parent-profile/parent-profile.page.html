@@ -5,22 +5,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="banner-toolbar" style="max-height:200px!important;">
+
+  <div class="banner-toolbar" style="max-height:100px!important;">
     <div class="profile-image-container">
       <img src="https://i.ibb.co/hM7VSDK/Screenshot-2024-07-07-at-7-04-17-AM.png" class="profile-image" alt="Profile Image">
     </div>
-    <h2>Catherine Pope</h2>
-    <div class="center-content">
-      <h4>Alumni at Northwestern University
-       <!--<ion-button class="profile-button" fill="clear" size="large" [routerLink]="['/school-profile']" routerDirection="forward">Northwestern University</ion-button>--> 
-      </h4>
-    </div>
+    <h1 style="font-style: italic;"><strong>Catherine Pope</strong></h1>
+    <h4 style="font-style: italic;"><strong>Alumni at Northwestern University</strong>
+      <!--<ion-button class="profile-button" fill="clear" size="large" [routerLink]="['/school-profile']" routerDirection="forward">Northwestern University</ion-button>--> 
+    </h4>
     <p>Ph.D, Computer Science</p>
     <p>Chicago, IL</p>
-
   </div>
 
-  <ion-card>
+
+  <ion-card class="layout">
     <ion-card-header>
       <ion-card-title>
         <h3>Biography</h3>
@@ -32,7 +31,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card class="layout">
     <ion-card-header>
       <ion-card-title>
         <h3>My Students</h3>
@@ -78,7 +77,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card>
+  <ion-card class="layout" style="padding-bottom:100px;">
     <ion-card-header>
       <ion-card-title>
         <h3>School Affiliations</h3>
@@ -110,4 +109,37 @@
       </ion-list>
     </ion-card-content>
   </ion-card>
+
+  <div class="custom-tabs">
+    <ion-button [routerLink]="['/tabs/tab1']">
+      <div class="button-content">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab2']">
+      <div class="button-content">
+        <ion-icon name="school"></ion-icon>
+        <span>Schools</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab3']">
+      <div class="button-content">
+        <ion-icon name="menu"></ion-icon>
+        <span>Menu</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab4']">
+      <div class="button-content">
+        <ion-icon name="people"></ion-icon>
+        <span>Groups</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab5']">
+      <div class="button-content">
+        <ion-icon name="notifications"></ion-icon>
+        <span>Alerts</span>
+      </div>
+    </ion-button>
+  </div>
 </ion-content>

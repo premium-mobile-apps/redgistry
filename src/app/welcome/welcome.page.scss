@@ -1,10 +1,9 @@
 
 
 ion-content {
-    --background: url(https://i.ibb.co/cYnPSVH/welcome-bkgimg.png) no-repeat center center / cover;
+  --background: url(https://i.ibb.co/fFHX1Wv/welcome-bkgimg-darker-btmgrd.png) no-repeat center / cover;
 }
 
-  
   /* Media query for larger screens */
   @media (min-width: 768px) {
     .bkgimg {
@@ -22,11 +21,23 @@ ion-content {
 
 .welcome-footer {
     padding-bottom: 78px;
+    padding-left: 33px;
+    padding-right: 33px;
     background-color: transparent;
     text-align: center;
 }
 
 h1.welcome-heading {
     font-size: 33px;
-    padding-bottom: 22px;
+    font-weight: bold;
+}
+
+h3.welcome-subheading {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h3.welcome-subheading2 {
+  font-size: 17px;
+  padding-bottom: 22px;
 }

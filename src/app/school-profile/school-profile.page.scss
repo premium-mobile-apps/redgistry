@@ -1,18 +1,96 @@
 .banner-toolbar {
     background: url(https://i.ibb.co/qsknn8k/profile-heading.jpg) no-repeat fixed center / cover; 
-    margin-bottom: 425px;
+    margin-bottom: 325px;
     padding-left: 20px;
     padding-right: 20px;
-}
-
-.profile-image-container {
-    margin-left: 16px;
-}
+  }
   
-.profile-image {
+  .profile-image-container {
+    margin-left: 16px;
+  }
+  
+  .profile-image {
     width: 100px; /* Adjust size as needed */
     height: 100px;
-    border-radius: 50%;
+    border-radius: 10px 40px;
     border: 3px solid white; /* Optional: border to highlight the profile image */
-    margin-top: 150px; /* Adjust based on your toolbar height */
-}
+    margin-top: 50px; /* Adjust based on your toolbar height */
+  }
+  
+  ion-title {
+      text-align: center;
+  }
+
+  ion-card {
+    width: 100%; /* Ensure the card spans full width */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .custom-tabs {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 0 10px;
+    z-index: 1000; /* Ensure it's above other content */
+    --ion-background-color: #fff; /* Optional: Override default background color */
+  }
+  
+  .custom-tabs ion-button {
+    --padding-start: 0;
+    --padding-end: 0;
+    --border: none;
+    --background: none;
+    color: #4600ff;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    --box-shadow: none; /* Remove the shadow */
+  
+  }
+  
+  .button-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .custom-tabs ion-button ion-icon {
+    font-size: 20px;
+    display: block;
+  
+  }
+  
+  .custom-tabs ion-button span {
+    display: block;
+    font-size: 10px;
+    margin-top: 4px; /* Adjust as needed */
+    text-align: center; /* Center text horizontally */
+    text-transform: none;
+  }
+
+  .social-button-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Adjust the gap as needed */
+    text-align: center;
+  }
+  
+  .social-button-container ion-button {
+    flex: 1;
+  }
+
+  button {
+    --background: var(--ion-color-primary);
+  }
+  
+  button.following {
+    --background: var(--ion-color-medium);
+  }

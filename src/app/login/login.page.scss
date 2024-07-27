@@ -3,3 +3,24 @@
 ion-content {
     background: white !important;
 }
+
+ion-button {
+    text-transform: none;
+}
+
+.center-content {
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.login-text-link {
+    text-decoration: none;
+    color: #7e4dff;
+    font-weight: 500;
+}
+
+ion-grid {
+    --ion-grid-width: 100%;
+}

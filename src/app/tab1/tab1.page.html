@@ -1,36 +1,42 @@
 <ion-header>
   <ion-toolbar class="banner-toolbar">
-    <div class="profile-image-container">
-      <ion-button fill="clear" [routerLink]="['/student-profile']" class="profile-image-button">
-        <img src="https://i.ibb.co/M61YYyy/jessica-pope.png" class="profile-image" alt="Profile Image">
-      </ion-button>
-    </div>
+      <div class="profile-image-container">
+    <ion-button fill="clear" [routerLink]="['/student-profile']" class="profile-image-button">
+      <img src="https://i.ibb.co/M61YYyy/jessica-pope.png" class="profile-image" alt="Profile Image">
+    </ion-button>
+  </div>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
   
   <ion-card>
-
     <ion-item button detail="true" [routerLink]="['/school-profile']">
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" />
       </ion-avatar>
-      <ion-label>
-        Northwestern University
+      <ion-label class="school-name">
+        <strong>Northwestern University</strong>
         <p>1 hour ago</p>
       </ion-label>
     </ion-item>
-        
-    <ion-card-header>
-      <ion-card-title><h3>Dirt-powered fuel cell runs forever</h3></ion-card-title>
-    </ion-card-header>
-  
+    
     <ion-card-content>
-      New tech harvests energy from microbes in soil to power sensors, communications A Northwestern University-led team of researchers has developed a new fuel cell that harvests energy from microbes living in dirt.
+      <p *ngIf="!showFullContent">
+        You did it, Northwestern University Pritzker School of Law Class of 2024! 🎉🎓...
+      </p>
+      <p *ngIf="showFullContent">
+        You did it, Northwestern University Pritzker School of Law Class of 2024! 🎉🎓&nbsp;&nbsp;
+
+        On Friday, Law School graduates celebrated their achievements during a convocation ceremony at the Chicago Theatre. Congrats, #NU2024!
+      </p>
+      <a (click)="toggleContent()" class="see-more-link">
+        {{ showFullContent ? 'See Less' : 'See More' }}
+      </a>
     </ion-card-content>
 
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <img alt="Silhouette of mountains" src="https://i.ibb.co/wSQmtpv/northwestern-post.png" />
 
     <div class="social-button-container">
       <ion-button size="small" fill="clear" color="secondary">
@@ -45,8 +51,6 @@
         <ion-icon slot="icon-only" name="bookmark"></ion-icon>
       </ion-button>
     </div>
-
-
   </ion-card>
     
   <ion-card>
@@ -55,14 +59,22 @@
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" />
       </ion-avatar>
-      <ion-label>
-        Stanford University
+      <ion-label class="school-name">
+        <strong>Stanford University</strong>
         <p>19 hours ago</p>
       </ion-label>
     </ion-item>
   
     <ion-card-content>
-      🔬 Embracing the scholarly symphony! Today's chapter unfolds with captivating lectures, synergistic study circles, and a pulsating surge or Ingenuity at Northwest University. Witness the marvels of knowledge unraveling, as each corner teems with electric anticipation. Unveil your academic milestones and lets rejoice in this riveting expedition! 🎉👩‍🎓👨‍🏫 #ScientificSerenade
+      <p *ngIf="!showFullContent1">
+        🔬 Embracing the scholarly symphony! Today's chapter unfolds with captivating lectures...
+      </p>
+      <p *ngIf="showFullContent1">
+        🔬 Embracing the scholarly symphony! Today's chapter unfolds with captivating lectures, synergistic study circles, and a pulsating surge or Ingenuity at Northwest University. Witness the marvels of knowledge unraveling, as each corner teems with electric anticipation. Unveil your academic milestones and lets rejoice in this riveting expedition! 🎉👩‍🎓👨‍🏫 #ScientificSerenade
+      </p>
+      <a (click)="toggleContent1()" class="see-more-link">
+        {{ showFullContent1 ? 'See Less' : 'See More' }}
+      </a>
     </ion-card-content>
 
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
@@ -84,13 +96,12 @@
   </ion-card>
     
   <ion-card>
-
     <ion-item button detail="true">
       <ion-avatar slot="start">
         <img alt="Silhouette of a person's head" src="https://asset.brandfetch.io/idcXdgjqLS/idI_JXDYNm.jpeg" />
       </ion-avatar>
-      <ion-label>
-        Purdue University
+      <ion-label class="school-name">
+        <strong>Purdue University</strong>
         <p>2 days ago</p>
       </ion-label>
     </ion-item>
@@ -100,7 +111,15 @@
     </ion-card-header>
   
     <ion-card-content>
-      Purdue is committed to celebrating Black excellence with stories about the giant leaps made Purdue's outstanding black students, alumni, faculty and staff. We honor the individuals from our Boilermaker history who have made significant impact on our university, and those who are continuing to do so. As part of Black History Month and beyond, we commemorate those who helped make Purdue University the outstanding Institution of higher learning it is today.
+      <p *ngIf="!showFullContent2">
+        Purdue is committed to celebrating Black excellence with stories about the giant leaps made
+      </p>
+      <p *ngIf="showFullContent2">
+        Purdue is committed to celebrating Black excellence with stories about the giant leaps made Purdue's outstanding black students, alumni, faculty and staff. We honor the individuals from our Boilermaker history who have made significant impact on our university, and those who are continuing to do so. As part of Black History Month and beyond, we commemorate those who helped make Purdue University the outstanding Institution of higher learning it is today.
+      </p>
+      <a (click)="toggleContent2()" class="see-more-link">
+        {{ showFullContent2 ? 'See Less' : 'See More' }}
+      </a>
     </ion-card-content>
 
     <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />

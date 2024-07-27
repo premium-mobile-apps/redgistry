@@ -6,6 +6,9 @@ import {
 } from '@ionic/angular/standalone';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+
+
+
 @Component({
   selector: 'app-student-profile',
   templateUrl: './student-profile.page.html',
@@ -20,6 +23,17 @@ export class StudentProfilePage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+  scrollToSection(event: Event) {
+    event.preventDefault();
+    const target = event.currentTarget as HTMLElement;
+    const targetId = target.getAttribute('data-target');
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   }
 
 }

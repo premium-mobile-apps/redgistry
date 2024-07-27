@@ -21,6 +21,7 @@ import { IonicModule } from '@ionic/angular';
 })
 export class SchoolProfilePage implements OnInit {
   selectedSegment: string = 'tab1';  // Initial value for the selected tab
+  showFullContent = false;
 
   constructor() { }
 
@@ -29,4 +30,19 @@ export class SchoolProfilePage implements OnInit {
   segmentChanged(event: any) {
     this.selectedSegment = event.detail.value;
   }
+
+  toggleContent() {
+    this.showFullContent = !this.showFullContent;
+  }
+
+  isFollowing = false;
+  buttonText = 'Follow';
+  buttonColor = 'primary'; // Initial color
+
+  toggleFollow() {
+    this.isFollowing = !this.isFollowing;
+    this.buttonText = this.isFollowing ? 'Unfollow' : 'Follow';
+    this.buttonColor = this.isFollowing ? 'medium' : 'primary'; // Change colors as needed
+  }
+
 }

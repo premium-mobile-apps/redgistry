@@ -5,11 +5,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="banner-toolbar" style="max-height:200px!important;">
+  <div class="banner-toolbar" style="max-height:100px!important;">
     <div class="profile-image-container">
-      <img src="https://i.ibb.co/hM7VSDK/Screenshot-2024-07-07-at-7-04-17-AM.png" class="profile-image" alt="Profile Image">
+      <img src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" class="profile-image" alt="Profile Image">
     </div>
-    <h2>Northwestern University</h2>
+    <h1 style="font-style: italic;"><strong>Northwestern University</strong></h1>
     <div class="center-content">
       <h4>Evanston, Illinois
       </h4>
@@ -20,20 +20,21 @@
       </ion-row>
       <ion-row>
         <ion-col size="6">In state Tuition</ion-col>
-        <ion-col size="6">$67,000</ion-col>
+        <ion-col style="text-align: right;" size="6">$67,000</ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="6">Undergraduate Enrollment</ion-col>
-        <ion-col size="6">8,659</ion-col>
+        <ion-col style="text-align: right;" size="6">8,659</ion-col>
       </ion-row>
       <ion-row>
         <ion-col size="6">Out of state Tuition</ion-col>
-        <ion-col size="6">$102,000</ion-col>
+        <ion-col style="text-align: right;" size="6">$102,000</ion-col>
       </ion-row>
     </ion-grid>
 
-    <ion-button>Following</ion-button>
-
+    <ion-button style="text-transform: none;" [ngStyle]="{'background-color': buttonColor}" (click)="toggleFollow()">
+      {{ buttonText }}
+    </ion-button>
 
   </div>
 
@@ -41,22 +42,22 @@
   <div>
     <ion-segment (ionChange)="segmentChanged($event)" value="tab1">
       <ion-segment-button value="tab1">
-        <ion-label>Posts</ion-label>
+        <ion-label style="text-transform: none;" >Posts</ion-label>
       </ion-segment-button>
       <ion-segment-button value="tab2">
-        <ion-label>About</ion-label>
+        <ion-label style="text-transform: none;" >About</ion-label>
       </ion-segment-button>
       <ion-segment-button value="tab3">
-        <ion-label>Affiliates</ion-label>
+        <ion-label style="text-transform: none;" >Affiliates</ion-label>
       </ion-segment-button>
       <ion-segment-button value="tab4">
-        <ion-label>Groups</ion-label>
+        <ion-label style="text-transform: none;" >Groups</ion-label>
       </ion-segment-button>
       <ion-segment-button value="tab5">
-        <ion-label>Events</ion-label>
+        <ion-label style="text-transform: none;" >Events</ion-label>
       </ion-segment-button>
       <ion-segment-button value="tab6">
-        <ion-label>Programs</ion-label>
+        <ion-label style="text-transform: none;" >Programs</ion-label>
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -64,27 +65,32 @@
   <div class="tab-content">
     <div *ngIf="selectedSegment === 'tab1'">
       <!-- Content for Tab 1 -->
-      <ion-card>
-
-        <ion-item detail="true">
+      <ion-card style="padding-bottom: 100px;">
+        <ion-item button detail="true" [routerLink]="['/school-profile']">
           <ion-avatar slot="start">
             <img alt="Silhouette of a person's head" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" />
           </ion-avatar>
-          <ion-label>
-            Northwestern University
+          <ion-label class="school-name">
+            <strong>Northwestern University</strong>
             <p>1 hour ago</p>
           </ion-label>
         </ion-item>
-            
-        <ion-card-header>
-          <ion-card-title><h3>Dirt-powered fuel cell runs forever</h3></ion-card-title>
-        </ion-card-header>
-      
+        
         <ion-card-content>
-          New tech harvests energy from microbes in soil to power sensors, communications A Northwestern University-led team of researchers has developed a new fuel cell that harvests energy from microbes living in dirt.
+          <p *ngIf="!showFullContent">
+            You did it, Northwestern University Pritzker School of Law Class of 2024! 🎉🎓...
+          </p>
+          <p *ngIf="showFullContent">
+            You did it, Northwestern University Pritzker School of Law Class of 2024! 🎉🎓&nbsp;&nbsp;
+    
+            On Friday, Law School graduates celebrated their achievements during a convocation ceremony at the Chicago Theatre. Congrats, #NU2024!
+          </p>
+          <a (click)="toggleContent()" class="see-more-link">
+            {{ showFullContent ? 'See Less' : 'See More' }}
+          </a>
         </ion-card-content>
     
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+        <img alt="Silhouette of mountains" src="https://i.ibb.co/wSQmtpv/northwestern-post.png" />
     
         <div class="social-button-container">
           <ion-button size="small" fill="clear" color="secondary">
@@ -106,20 +112,20 @@
       <!-- Content for Tab 2 -->
       <ion-card>
         <ion-card-header>
-          <ion-card-title>
-            <h3>Summary</h3>
+          <ion-card-title style="font-style: italic;">
+            <h3>SUMMARY</h3>
           </ion-card-title>
         </ion-card-header>
       
         <ion-card-content>
-          Northwestern University s a comprehensive research university that is deeply interdisciplinary across multiple schools and units. Our rigorous yet empathetic academic environment provides a robust mixture of theory and practice, with an emphasis on top-tier research, new knowledge, creative expression and practical application. northwestern provides both students and faculty exceptional opportunities for intellectual, personal, and professional growth in beautiful settings, With two campuses located on Lake Michigan: a 240-acre campus in Evanston, minutes North of Chicago, and a 25-acre campus in Downtown Chicago. If you are at Northwestern, you are part of an innovative, collaborative, and multidimensional community delivering an impact that is rare in higher education.
+          Northwestern University is a comprehensive research university that is deeply interdisciplinary across multiple schools and units. Our rigorous yet empathetic academic environment provides a robust mixture of theory and practice, with an emphasis on top-tier research, new knowledge, creative expression and practical application. northwestern provides both students and faculty exceptional opportunities for intellectual, personal, and professional growth in beautiful settings, With two campuses located on Lake Michigan: a 240-acre campus in Evanston, minutes North of Chicago, and a 25-acre campus in Downtown Chicago. If you are at Northwestern, you are part of an innovative, collaborative, and multidimensional community delivering an impact that is rare in higher education.
         </ion-card-content>
       </ion-card>
 
       <ion-card>
         <ion-card-header>
-          <ion-card-title>
-            <h3>At A Glance</h3>
+          <ion-card-title style="font-style: italic;">
+            <h3><strong>At A Glance</strong></h3>
           </ion-card-title>
         </ion-card-header>
       
@@ -127,72 +133,89 @@
             <ion-grid>
               <ion-row>
                 <ion-col size="6">Undergraduate Acceptance Rate</ion-col>
-                <ion-col size="6">67%</ion-col>
+                <ion-col size="6" style="text-align: right;">67%</ion-col>
               </ion-row>
               <ion-row>
                 <ion-col size="6">Undergraduate Enrollment</ion-col>
-                <ion-col size="6">8,659</ion-col>
+                <ion-col size="6" style="text-align: right;">8,659</ion-col>
               </ion-row>
               <ion-row>
                 <ion-col size="6">Graduate Enrollment</ion-col>
-                <ion-col size="6">46%</ion-col>
+                <ion-col size="6" style="text-align: right;">46%</ion-col>
               </ion-row>
               <ion-row>
                 <ion-col size="6">In state Tuition</ion-col>
-                <ion-col size="6">$67,000</ion-col>
+                <ion-col size="6" style="text-align: right;">$67,000</ion-col>
               </ion-row>
               <ion-row>
-                <ion-col size="6">Out of state Tuition</ion-col>
-                <ion-col size="6">$102,000</ion-col>
+                <ion-col size="6">
+                  Out of state Tuition</ion-col>
+                <ion-col size="6" style="text-align: right;">$102,000</ion-col>
               </ion-row>
-
-              <ion-row>
-                <ion-col size="6">Visit School Admissions Page</ion-col>
-                <ion-col size="6">Visit School Financial Aid Page</ion-col>
-              </ion-row>
-            <ion-row>
-              <ion-col size="6">Visit School Athletics Page</ion-col>
-              <ion-col size="6">School Rankings/Facts 2</ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col size="12">633 Clark Ave, Evanston, IL, 60208</ion-col>
-            </ion-row>
-
           </ion-grid>
+          <ion-list lines="none" style="padding-left: 0%;" class="padding">
+            <ion-item>
+              <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
+              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Admissions Page</a></ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
+              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Financial Aid Page</a></ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
+              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Athletics Page</a></ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
+              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">School Rankings/Facts 2</a></ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-icon aria-hidden="true" name="location-outline" slot="end" color="secondary"></ion-icon>
+              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">633 Clark Ave, Evanston, IL, 60208</a></ion-label>
+            </ion-item>
+          </ion-list>
 
         </ion-card-content>
       </ion-card>
 
       <ion-list>
-        <ion-list-header>
-          <h3>Rankings</h3>
+        <ion-list-header style="font-style: italic;">
+          <h3><strong>Rankings</strong></h3>
         </ion-list-header>
         <ion-item>
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">
-            2024 Rankings
-            <p>Schools are ranked according to their performance across a set of widely accepted indicators of excellence.</p>
+          <ion-label style="margin-left: 12px;font-style: italic;">
+            <strong>2024 Rankings</strong>
+            <strong>
+              <p>Schools are ranked according to their performance across a set of widely accepted indicators of excellence.</p>
+            </strong>
           </ion-label>
         </ion-item>
         <ion-item>
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">#9 in National Universities (tie)</ion-label>
+          <ion-label style="margin-left: 12px;font-style: italic;">
+            <strong>#9 in <a href="#" style="text-decoration: none;color: #7e4dff;">National Universities (tie)</a></strong>
+          </ion-label>
         </ion-item>
         <ion-item>
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+          <ion-label style="margin-left: 12px;font-style: italic;">
+            <strong>#15 in <a href="#" style="text-decoration: none;color: #7e4dff;">Best Value Schools</a></strong>
+          </ion-label>
         </ion-item>
         <ion-item>
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">#13 in Engineering Programs (doctorate) (tie)</ion-label>
+          <ion-label style="margin-left: 12px;font-style: italic;">
+            <strong>#13 in <a href="#" style="text-decoration: none;color: #7e4dff;">Engineering Programs (doctorate) (tie)</a></strong></ion-label>
         </ion-item>
       </ion-list>
 
@@ -200,20 +223,20 @@
         <img alt="Silhouette of mountains" src="https://i.ibb.co/z5zvNQq/Screenshot-2024-07-08-at-7-22-36-AM1.png" />
       </ion-card>
 
-      <ion-card>
+      <ion-card style="padding-bottom: 100px;">
         <ion-list>
           <ion-grid>
             <ion-row>
               <ion-col size="8">Graduation Rate</ion-col>
-              <ion-col size="4">87%</ion-col>
+              <ion-col style="text-align: right;" size="4">87%</ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="8">Students Who Borrowed (any loan type)</ion-col>
-              <ion-col size="4">29%</ion-col>
+              <ion-col style="text-align: right;" size="4">29%</ion-col>
             </ion-row>
             <ion-row>
               <ion-col size="8">Average Debt At Graduation</ion-col>
-              <ion-col size="4">46%</ion-col>
+              <ion-col style="text-align: right;" size="4">46%</ion-col>
             </ion-row>
           </ion-grid>
         </ion-list>
@@ -223,17 +246,17 @@
 
     <div *ngIf="selectedSegment === 'tab3'">
       <!-- Content for Tab 3 -->
-      <ion-list>
+      <ion-list style="padding-bottom: 100px;">
         <ion-item>
           <ion-thumbnail slot="start">
             <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2>Item 1</h2>
+            <h2><strong>Item 1</strong></h2>
             <p>Description for Item 1</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
-            Action
+            Follow
           </ion-button>
         </ion-item>
       
@@ -242,11 +265,11 @@
             <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2>Item 2</h2>
+            <h2><strong>Item 2</strong></h2>
             <p>Description for Item 2</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
-            Action
+            Follow
           </ion-button>
         </ion-item>
       
@@ -255,28 +278,28 @@
             <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2>Item 3</h2>
+            <h2><strong>Item 3</strong></h2>
             <p>Description for Item 3</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
-            Action
+            Follow
           </ion-button>
         </ion-item>
       </ion-list>
     </div>
     <div *ngIf="selectedSegment === 'tab4'">
-      <!-- Content for Tab 3 -->
-      <ion-list>
+      <!-- Content for Tab 4 -->
+      <ion-list style="padding-bottom: 100px;">
         <ion-item>
           <ion-thumbnail slot="start">
             <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2>Item 1</h2>
+            <h2><strong>Item 1</strong></h2>
             <p>Description for Item 1</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
-            Action
+            Join
           </ion-button>
         </ion-item>
       
@@ -285,11 +308,11 @@
             <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2>Item 2</h2>
+            <h2><strong>Item 2</strong></h2>
             <p>Description for Item 2</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
-            Action
+            Join
           </ion-button>
         </ion-item>
       
@@ -298,17 +321,17 @@
             <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2>Item 3</h2>
+            <h2><strong>Item 3</strong></h2>
             <p>Description for Item 3</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
-            Action
+            Join
           </ion-button>
         </ion-item>
       </ion-list>    </div>
     <div *ngIf="selectedSegment === 'tab5'">
       <!-- Content for Tab 5 -->
-       <ion-list>
+       <ion-list style="padding-bottom: 100px;">
         <ion-item>
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
@@ -332,7 +355,7 @@
     </div>
     <div *ngIf="selectedSegment === 'tab6'">
       <!-- Content for Tab 6 -->
-       <ion-list>
+       <ion-list style="padding-bottom: 100px;">
         <ion-item>AFRICAN STUDIES</ion-item>
         <ion-item>AMERICAN STUDIES</ion-item>
         <ion-item>ANTHROPOLOGY</ion-item>
@@ -344,4 +367,36 @@
     </div>
   </div>
   
+  <div class="custom-tabs">
+    <ion-button [routerLink]="['/tabs/tab1']">
+      <div class="button-content">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab2']">
+      <div class="button-content">
+        <ion-icon name="school"></ion-icon>
+        <span>Schools</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab3']">
+      <div class="button-content">
+        <ion-icon name="menu"></ion-icon>
+        <span>Menu</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab4']">
+      <div class="button-content">
+        <ion-icon name="people"></ion-icon>
+        <span>Groups</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab5']">
+      <div class="button-content">
+        <ion-icon name="notifications"></ion-icon>
+        <span>Alerts</span>
+      </div>
+    </ion-button>
+  </div>
 </ion-content>

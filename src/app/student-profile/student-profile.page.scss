@@ -12,7 +12,7 @@
 .profile-image {
     width: 100px; /* Adjust size as needed */
     height: 100px;
-    border-radius: 10px 40px;
+    border-radius: 0px 20px;
     border: 3px solid white; /* Optional: border to highlight the profile image */
     margin-top: 50px; /* Adjust based on your toolbar height */
 }
@@ -45,7 +45,7 @@ margin-right: 0;
     --padding-end: 0;
     --border: none;
     --background: none;
-    color: #4600ff;
+    color: #4e0eff;
     font-size: 16px;
     text-align: center;
     cursor: pointer;
@@ -84,7 +84,7 @@ margin-right: 0;
     z-index: 100; /* Ensure it stays above other content */
     background-color: #fff; /* Background color to match the page */
     padding: 10px 0; /* Padding around the navigation links */
-    border-bottom: 1px solid #ccc; /* Optional border for visual separation */
+    border-bottom: 1px solid #fff; /* Optional border for visual separation */
     display: flex; /* Flexbox to align items */
     justify-content: center; /* Center items horizontally */ 
     overflow-x: auto; /* Allows horizontal scrolling if needed */
@@ -99,7 +99,7 @@ margin-right: 0;
   }
   
   .nav-menu a:hover {
-    color: #4600ff; /* Change color on hover */
+    color: #4e0eff;
   }
 
   /* Responsive adjustments */

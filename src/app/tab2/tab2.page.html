@@ -1,15 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Discover Universities</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="card-stack">
+    <button class="swipe-button left" (click)="swipeLeft()" *ngIf="isDesktop">Swipe Left</button>
+    <button class="swipe-button right" (click)="swipeRight()" *ngIf="isDesktop">Swipe Right</button>
+    <div *ngFor="let card of cards" class="card" (click)="openDetails(card)" #cardElem [style.backgroundImage]="'url(' + card.image + ')'">
+      <div class="card-content">
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+  
 </ion-content>

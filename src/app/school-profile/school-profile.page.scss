@@ -1,6 +1,6 @@
 .banner-toolbar {
     background: url(https://i.ibb.co/qsknn8k/profile-heading.jpg) no-repeat fixed center / cover; 
-    margin-bottom: 500px;
+    margin-bottom: 325px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -15,6 +15,7 @@
     border-radius: 10px 40px;
     border: 3px solid white; /* Optional: border to highlight the profile image */
     margin-top: 50px; /* Adjust based on your toolbar height */
+    object-fit: cover;
   }
   
   ion-title {
@@ -45,7 +46,7 @@
     --padding-end: 0;
     --border: none;
     --background: none;
-    color: #4600ff;
+    color: #4e0eff;
     font-size: 16px;
     text-align: center;
     cursor: pointer;
@@ -94,3 +95,83 @@
   button.following {
     --background: var(--ion-color-medium);
   }
+
+  .pie-chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pie-chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: rotate(-90deg);
+  }
+  
+  .slice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(0px, 200px, 200px, 100px);
+    border-radius: 50%;
+    transform-origin: 50% 50%;
+  }
+  
+  .slice-1 {
+    background-color: #f44336;
+    transform: rotate(0deg) rotate(0deg);
+  }
+  
+  .slice-2 {
+    background-color: #ff9800;
+    transform: rotate(45deg) rotate(45deg);
+  }
+  
+  .slice-3 {
+    background-color: #ffeb3b;
+    transform: rotate(90deg) rotate(45deg);
+  }
+  
+  .slice-4 {
+    background-color: #4caf50;
+    transform: rotate(135deg) rotate(45deg);
+  }
+  
+  .legend {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  
+  .legend-color {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .color-1 {
+    background-color: #f44336;
+  }
+  
+  .color-2 {
+    background-color: #ff9800;
+  }
+  
+  .color-3 {
+    background-color: #ffeb3b;
+  }
+  
+  .color-4 {
+    background-color: #4caf50;
+  }
+  

@@ -37,5 +37,22 @@
 @import '@ionic/angular/css/palettes/dark.system.css';
 
 html, body, ion-app, ion-content {
-    background-color: var(--ion-background-color)!important;
+  background-color: white !important;
+  color: black; /* Optional: to ensure text color is also consistent */
   }
+
+  @media (prefers-color-scheme: dark) {
+    body, ion-app {
+      background-color: white !important;
+      color: black;
+    }
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  :root {
+    color-scheme: light;
+  }
+  

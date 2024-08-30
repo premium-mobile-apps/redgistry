@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ card.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="detail-image-container">
+    <img [src]="card.image" alt="{{ card.title }}">
+  </div>
+  <div class="detail-content">
+    <h1>{{ card.title }}</h1>
+    <p>{{ card.fullDescription }}</p>
+  </div>
+</ion-content>

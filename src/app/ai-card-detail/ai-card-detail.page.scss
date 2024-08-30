@@ -1,0 +1,26 @@
+.detail-image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .detail-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .detail-content {
+    padding: 20px;
+  }
+  
+  .detail-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .detail-content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

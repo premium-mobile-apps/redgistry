@@ -1,13 +1,25 @@
 <ion-header>
-  <ion-toolbar class="banner-toolbar">
-      <div class="profile-image-container">
-    <ion-button fill="clear" [routerLink]="['/student-profile']" class="profile-image-button">
-      <img src="https://i.ibb.co/M61YYyy/jessica-pope.png" class="profile-image" alt="Profile Image">
-    </ion-button>
-  </div>
-  </ion-toolbar>
+  <!-- Container above the toolbar -->
+  <div class="search-container">
+    <div class="search-row">
+      <ion-searchbar></ion-searchbar>
 
+      <ion-button fill="clear" class="message-button">
+        <ion-icon name="chatbubbles"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+  
+  <ion-toolbar class="banner-toolbar">
+    <div class="profile-image-container">
+      <ion-button fill="clear" [routerLink]="['/student-profile']" class="profile-image-button">
+        <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/jessica-pope.png" class="profile-image" alt="Profile Image">
+      </ion-button>
+    </div>
+  </ion-toolbar>
 </ion-header>
+
+
 
 <ion-content [fullscreen]="true">
   
@@ -36,7 +48,7 @@
       </a>
     </ion-card-content>
 
-    <img alt="Silhouette of mountains" src="https://i.ibb.co/wSQmtpv/northwestern-post.png" />
+    <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
 
     <div class="social-button-container">
       <ion-button size="small" fill="clear" color="secondary">
@@ -67,17 +79,18 @@
   
     <ion-card-content>
       <p *ngIf="!showFullContent1">
-        🔬 Embracing the scholarly symphony! Today's chapter unfolds with captivating lectures...
+        When you take a photo of campus and the nondescript bicyclist in the foreground turns...
       </p>
       <p *ngIf="showFullContent1">
-        🔬 Embracing the scholarly symphony! Today's chapter unfolds with captivating lectures, synergistic study circles, and a pulsating surge or Ingenuity at Northwest University. Witness the marvels of knowledge unraveling, as each corner teems with electric anticipation. Unveil your academic milestones and lets rejoice in this riveting expedition! 🎉👩‍🎓👨‍🏫 #ScientificSerenade
+        When you take a photo of campus and the nondescript bicyclist in the foreground turns out to be a 5x Olympic gold medalist. (👏 for the helmet.)
       </p>
       <a (click)="toggleContent1()" class="see-more-link">
         {{ showFullContent1 ? 'See Less' : 'See More' }}
       </a>
     </ion-card-content>
 
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+
+    <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/stanford-timeline.jpeg" />
 
     <div class="social-button-container">
       <ion-button size="small" fill="clear" color="secondary">
@@ -108,17 +121,17 @@
   
     <ion-card-content>
       <p *ngIf="!showFullContent2">
-        Purdue is committed to celebrating Black excellence with stories about the giant leaps made
+        There are many different paths one might follow to become an astronaut. Jerry Ross is among...
       </p>
       <p *ngIf="showFullContent2">
-        Purdue is committed to celebrating Black excellence with stories about the giant leaps made Purdue's outstanding black students, alumni, faculty and staff. We honor the individuals from our Boilermaker history who have made significant impact on our university, and those who are continuing to do so. As part of Black History Month and beyond, we commemorate those who helped make Purdue University the outstanding Institution of higher learning it is today.
+        There are many different paths one might follow to become an astronaut. Jerry Ross is among four #Boilermaker astronauts who graduated from Purdue University Mechanical Engineering before joining NASA - National Aeronautics and Space Administration.
       </p>
       <a (click)="toggleContent2()" class="see-more-link">
         {{ showFullContent2 ? 'See Less' : 'See More' }}
       </a>
     </ion-card-content>
 
-    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/purdue-timeline.png" />
 
     <div class="social-button-container">
       <ion-button size="small" fill="clear" color="secondary">

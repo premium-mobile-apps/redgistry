@@ -17,18 +17,11 @@
     <ion-grid>
       <ion-row>
         <ion-col size="6">4-Year Private University</ion-col>
+        <ion-col style="text-align: right;" size="6">In state Tuition: $67,000</ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="6">In state Tuition</ion-col>
-        <ion-col style="text-align: right;" size="6">$67,000</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">Undergraduate Enrollment</ion-col>
-        <ion-col style="text-align: right;" size="6">8,659</ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size="6">Out of state Tuition</ion-col>
-        <ion-col style="text-align: right;" size="6">$102,000</ion-col>
+        <ion-col size="6">Undergraduate Enrollment: 8,659</ion-col>
+        <ion-col style="text-align: right;" size="6">Out of state Tuition: $102,000</ion-col>
       </ion-row>
     </ion-grid>
 
@@ -39,7 +32,7 @@
   </div>
 
 
-  <div>
+  <div style="margin-top: 100px!important;">
     <ion-segment (ionChange)="segmentChanged($event)" value="tab1">
       <ion-segment-button value="tab1">
         <ion-label style="text-transform: none;" >Posts</ion-label>
@@ -90,7 +83,7 @@
           </a>
         </ion-card-content>
     
-        <img alt="Silhouette of mountains" src="https://i.ibb.co/wSQmtpv/northwestern-post.png" />
+        <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
     
         <div class="social-button-container">
           <ion-button size="small" fill="clear" color="secondary">
@@ -185,7 +178,7 @@
         </ion-list-header>
         <ion-item>
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/school-rankings-img.png" style="background-color: white;"/>
           </ion-thumbnail>
           <ion-label style="margin-left: 12px;font-style: italic;">
             <strong>2024 Rankings</strong>
@@ -196,7 +189,7 @@
         </ion-item>
         <ion-item>
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/school-rank-imgs.png" style="background-color: white;"/>
           </ion-thumbnail>
           <ion-label style="margin-left: 12px;font-style: italic;">
             <strong>#9 in <a href="#" style="text-decoration: none;color: #7e4dff;">National Universities (tie)</a></strong>
@@ -204,7 +197,7 @@
         </ion-item>
         <ion-item>
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/school-rank-imgs.png" style="background-color: white;"/>
           </ion-thumbnail>
           <ion-label style="margin-left: 12px;font-style: italic;">
             <strong>#15 in <a href="#" style="text-decoration: none;color: #7e4dff;">Best Value Schools</a></strong>
@@ -212,7 +205,7 @@
         </ion-item>
         <ion-item>
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/school-rank-imgs.png" style="background-color: white;"/>
           </ion-thumbnail>
           <ion-label style="margin-left: 12px;font-style: italic;">
             <strong>#13 in <a href="#" style="text-decoration: none;color: #7e4dff;">Engineering Programs (doctorate) (tie)</a></strong></ion-label>
@@ -220,8 +213,35 @@
       </ion-list>
 
       <ion-card>
-        <img alt="Silhouette of mountains" src="https://i.ibb.co/z5zvNQq/Screenshot-2024-07-08-at-7-22-36-AM1.png" />
+        <ion-card-header>
+          <ion-card-title>University Demographics</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <div class="pie-chart-container">
+            <div class="pie-chart">
+              <div class="slice slice-1"></div>
+              <div class="slice slice-2"></div>
+              <div class="slice slice-3"></div>
+              <div class="slice slice-4"></div>
+            </div>
+            <div class="legend">
+              <div class="legend-item">
+                <span class="legend-color color-1"></span> 25% Asian
+              </div>
+              <div class="legend-item">
+                <span class="legend-color color-2"></span> 14% Asian
+              </div>
+              <div class="legend-item">
+                <span class="legend-color color-3"></span> 11% Hispanic
+              </div>
+              <div class="legend-item">
+                <span class="legend-color color-4"></span> 50% White
+              </div>
+            </div>
+          </div>
+        </ion-card-content>
       </ion-card>
+      
 
       <ion-card style="padding-bottom: 100px;">
         <ion-list>
@@ -249,11 +269,11 @@
       <ion-list style="padding-bottom: 100px;">
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-1.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2><strong>Item 1</strong></h2>
-            <p>Description for Item 1</p>
+            <h2><strong>Northwestern Alumni</strong></h2>
+            <p>The Northwestern Alumni Association invites all members of the Northwestern family—alumni, current students, parents, and friends—to connect with the University’s alumni community. This powerful network of doers spans the globe and includes virtually every profession. Here, you’ll find the events, ideas, and resources that matter to you. So, take a look around and browse. We hope you’ll come back often. And, of course, Go ’Cats!</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
             Follow
@@ -262,11 +282,11 @@
       
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-2.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2><strong>Item 2</strong></h2>
-            <p>Description for Item 2</p>
+            <h2><strong>Northwestern University - Bienen School of Music</strong></h2>
+            <p>Northwestern is one of the nation's premier research universities, combining innovative teaching and pioneering research in a highly collaborative, multidisciplinary, and diverse environment.</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
             Follow
@@ -275,11 +295,11 @@
       
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-3.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2><strong>Item 3</strong></h2>
-            <p>Description for Item 3</p>
+            <h2><strong>Northwestern in Qatar</strong></h2>
+            <p>Founded in 1859, Northwestern Pritzker School of Law advances the understanding of law and produces graduates prepared to excel in a rapidly changing world. Northwestern Law uniquely blends a rigorous...</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
             Follow
@@ -292,11 +312,11 @@
       <ion-list style="padding-bottom: 100px;">
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-group-3.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2><strong>Item 1</strong></h2>
-            <p>Description for Item 1</p>
+            <h2><strong>Solar Car Team</strong></h2>
+            <p>NUsolar is student-led organization designing, manufacturing and racing the next generation of solar powered electric vehicles. Founded in 1997...</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
             Join
@@ -305,11 +325,11 @@
       
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-group-1.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2><strong>Item 2</strong></h2>
-            <p>Description for Item 2</p>
+            <h2><strong>Northwestern Community Ensemble</strong></h2>
+            <p>Whilst established during a time of great racial distress on campus, NCE has become a haven and spiritual release for all NU students. Still rooted in the rich heritage found in gospel music and worship, NCE...</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
             Join
@@ -318,11 +338,11 @@
       
         <ion-item>
           <ion-thumbnail slot="start">
-            <img src="https://ionicframework.com/docs/img/demos/thumbnail.svg" alt="Thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-group-2.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
-            <h2><strong>Item 3</strong></h2>
-            <p>Description for Item 3</p>
+            <h2><strong>Lipstick Theatre</strong></h2>
+            <p>Art in activism, activism in art. That’s Lipstick Theatre’s motto. Northwestern’s feminist student theatre board puts on three productions per year. Most recently, the group showcased “Sunrise Coven” in early February. All of its shows...</p>
           </ion-label>
           <ion-button slot="end" fill="outline">
             Join
@@ -334,21 +354,21 @@
        <ion-list style="padding-bottom: 100px;">
         <ion-item>
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-1.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+          <ion-label style="margin-left: 8px;">Artificial Intelligence Innovation Summit</ion-label>
         </ion-item>
         <ion-item>
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-3.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+          <ion-label style="margin-left: 8px;">Women's Health Tech Wednesday</ion-label>
         </ion-item>
         <ion-item>
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" style="background-color: white;"/>
+            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-2.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">#15 in Best Value Schools</ion-label>
+          <ion-label style="margin-left: 8px;">Best Practices for Networking on Zoom</ion-label>
         </ion-item>
        </ion-list>
 

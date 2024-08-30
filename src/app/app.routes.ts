@@ -42,4 +42,8 @@ export const routes: Routes = [
     path: 'parent-profile',
     loadComponent: () => import('./parent-profile/parent-profile.page').then( m => m.ParentProfilePage)
   },
+  {
+    path: 'ai-card-detail',
+    loadComponent: () => import('./ai-card-detail/ai-card-detail.page').then( m => m.AICardDetailPage)
+  },
 ];

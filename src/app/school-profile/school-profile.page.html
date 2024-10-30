@@ -9,10 +9,9 @@
     <div class="profile-image-container">
       <img src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" class="profile-image" alt="Profile Image">
     </div>
-    <h1 style="font-style: italic;"><strong>Northwestern University</strong></h1>
+    <h1 style="font-style: italic;text-align: center;"><strong>Northwestern University</strong></h1>
     <div class="center-content">
-      <h4>Evanston, Illinois
-      </h4>
+      <h4 style="text-align: center;">Evanston, Illinois</h4>
     </div>
     <ion-grid>
       <ion-row>
@@ -25,7 +24,7 @@
       </ion-row>
     </ion-grid>
 
-    <ion-button style="text-transform: none;" [ngStyle]="{'background-color': buttonColor}" (click)="toggleFollow()">
+    <ion-button style="text-transform: none;display: flex;" [ngStyle]="{'background-color': buttonColor}" (click)="toggleFollow()">
       {{ buttonText }}
     </ion-button>
 
@@ -86,9 +85,9 @@
         <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
     
         <div class="social-button-container">
-          <ion-button size="small" fill="clear" color="secondary">
+          <ion-button  size="small" fill="clear" color="secondary" style="text-transform: none;" [ngStyle]="{'background-color': likeButtonColor}" (click)="toggleLike()">
             <ion-icon slot="start" name="heart"></ion-icon>
-            333k
+            {{ likeButtonText }}
           </ion-button>
           <ion-button size="small" fill="clear" color="secondary">
             <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
@@ -149,23 +148,23 @@
           <ion-list lines="none" style="padding-left: 0%;" class="padding">
             <ion-item>
               <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
-              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Admissions Page</a></ion-label>
+              <ion-label><a href="https://admissions.northwestern.edu/" target="_blank" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Admissions Page</a></ion-label>
             </ion-item>
             <ion-item>
               <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
-              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Financial Aid Page</a></ion-label>
+              <ion-label><a href="https://admissions.northwestern.edu/tuition-aid/" target="_blank" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Financial Aid Page</a></ion-label>
             </ion-item>
             <ion-item>
               <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
-              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Athletics Page</a></ion-label>
+              <ion-label><a href="https://nusports.com/" target="_blank" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Athletics Page</a></ion-label>
             </ion-item>
             <ion-item>
               <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
-              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">School Rankings/Facts 2</a></ion-label>
+              <ion-label><a href="https://www.usnews.com/best-colleges/northwestern-university-1739" target="_blank" style="font-size: 14px;text-decoration: none;color: #7e4dff;">School Rankings/Facts 2</a></ion-label>
             </ion-item>
             <ion-item>
               <ion-icon aria-hidden="true" name="location-outline" slot="end" color="secondary"></ion-icon>
-              <ion-label><a href="#" style="font-size: 14px;text-decoration: none;color: #7e4dff;">633 Clark Ave, Evanston, IL, 60208</a></ion-label>
+              <ion-label><a style="font-size: 14px;text-decoration: none;color: #7e4dff;">633 Clark Ave, Evanston, IL, 60208</a></ion-label>
             </ion-item>
           </ion-list>
 
@@ -192,7 +191,7 @@
             <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/school-rank-imgs.png" style="background-color: white;"/>
           </ion-thumbnail>
           <ion-label style="margin-left: 12px;font-style: italic;">
-            <strong>#9 in <a href="#" style="text-decoration: none;color: #7e4dff;">National Universities (tie)</a></strong>
+            <strong>#9 in <a href="https://www.usnews.com/best-colleges/rankings/national-universities" target="_blank" style="text-decoration: none;color: #7e4dff;">National Universities (tie)</a></strong>
           </ion-label>
         </ion-item>
         <ion-item>
@@ -200,7 +199,7 @@
             <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/school-rank-imgs.png" style="background-color: white;"/>
           </ion-thumbnail>
           <ion-label style="margin-left: 12px;font-style: italic;">
-            <strong>#15 in <a href="#" style="text-decoration: none;color: #7e4dff;">Best Value Schools</a></strong>
+            <strong>#15 in <a href="https://www.usnews.com/best-colleges/rankings/national-universities/best-value" target="_blank" style="text-decoration: none;color: #7e4dff;">Best Value Schools</a></strong>
           </ion-label>
         </ion-item>
         <ion-item>
@@ -208,7 +207,7 @@
             <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/school-rank-imgs.png" style="background-color: white;"/>
           </ion-thumbnail>
           <ion-label style="margin-left: 12px;font-style: italic;">
-            <strong>#13 in <a href="#" style="text-decoration: none;color: #7e4dff;">Engineering Programs (doctorate) (tie)</a></strong></ion-label>
+            <strong>#13 in <a href="https://www.usnews.com/best-colleges/rankings/engineering-doctorate" target="_blank" style="text-decoration: none;color: #7e4dff;">Engineering Programs (doctorate) (tie)</a></strong></ion-label>
         </ion-item>
       </ion-list>
 
@@ -348,7 +347,8 @@
             Join
           </ion-button>
         </ion-item>
-      </ion-list>    </div>
+      </ion-list>
+    </div>
     <div *ngIf="selectedSegment === 'tab5'">
       <!-- Content for Tab 5 -->
        <ion-list style="padding-bottom: 100px;">
@@ -356,19 +356,25 @@
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-1.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">Artificial Intelligence Innovation Summit</ion-label>
+          <ion-toggle>
+            <ion-label style="margin-left: 8px;">Artificial Intelligence Innovation Summit</ion-label>
+          </ion-toggle>
         </ion-item>
         <ion-item>
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-3.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">Women's Health Tech Wednesday</ion-label>
+          <ion-toggle>
+            <ion-label style="margin-left: 8px;">Women's Health Tech Wednesday</ion-label>
+          </ion-toggle>
         </ion-item>
         <ion-item>
           <ion-thumbnail>
             <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-2.png" style="background-color: white;"/>
           </ion-thumbnail>
-          <ion-label style="margin-left: 8px;">Best Practices for Networking on Zoom</ion-label>
+          <ion-toggle>
+            <ion-label style="margin-left: 8px;">Best Practices for Networking on Zoom</ion-label>
+          </ion-toggle>
         </ion-item>
        </ion-list>
 
@@ -376,12 +382,36 @@
     <div *ngIf="selectedSegment === 'tab6'">
       <!-- Content for Tab 6 -->
        <ion-list style="padding-bottom: 100px;">
-        <ion-item>AFRICAN STUDIES</ion-item>
-        <ion-item>AMERICAN STUDIES</ion-item>
+        <ion-item id="open-modal">AFRICAN STUDIES</ion-item>
+        <ion-modal trigger="open-modal">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar>
+                <ion-buttons slot="start">
+                  <ion-button (click)="cancel()">
+                    <ion-icon name="close"></ion-icon>
+                  </ion-button>
+                </ion-buttons>
+                <ion-title>AFRICAN STUDIES</ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+              <div class="detail-image-container">
+                <img src="https://images.unsplash.com/photo-1489493887464-892be6d1daae?q=80&w=2967&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="African Studies Program Image">
+              </div>
+              <div class="detail-content">
+                <h1>About African Studies</h1>
+                <p>African American Studies is an interdisciplinary academic field that explores the history, culture, politics, and experiences of African Americans and the African diaspora. It delves into the systemic structures of racism, the legacy of slavery, and the ongoing struggles for civil rights and social justice. Key topics include the transatlantic slave trade, Reconstruction, the Harlem Renaissance, the Civil Rights Movement, Black feminism, and contemporary issues like police brutality, mass incarceration, and the Black Lives Matter movement. The field highlights the contributions of African Americans to arts, literature, music, politics, and science, while also emphasizing the resilience and creativity of Black communities in shaping U.S. and global history.</p>
+              </div>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+        <ion-item color="light">AMERICAN STUDIES</ion-item>
         <ion-item>ANTHROPOLOGY</ion-item>
-        <ion-item>APPLIED MATHEMATICS</ion-item>
+        <ion-item color="light">APPLIED MATHEMATICS</ion-item>
         <ion-item>ARABIC</ion-item>
-        <ion-item>ARCHITECTURAL ENGINEERING AND DESIGN</ion-item>
+        <ion-item color="light">ARCHITECTURAL ENGINEERING AND DESIGN</ion-item>
 
        </ion-list>
     </div>

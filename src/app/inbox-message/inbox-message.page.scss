@@ -1,0 +1,91 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .chat-bubble {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    max-width: 75%;
+    word-wrap: break-word;
+  }
+  
+  .chat-bubble.left {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  
+  .chat-bubble.right {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  /*.avatar.right {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }*/
+  
+  .bubble-content {
+    background-color: #4600ff;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+  }
+  
+  .chat-bubble.right .bubble-content {
+    background-color: #0078ff;
+    color: white;
+  }
+  
+  ion-footer {
+    --background: white;
+      /*display: flex;
+    align-items: center;
+    padding: 10px;*/
+  }
+
+  /* Container with white background above the toolbar */
+.search-container {
+    background-color: white;
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  /* Row containing the search box and message button */
+  .search-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Search box styles */
+  .search-box {
+    flex: 0 1 90%; /* Takes up 90% of the width */
+    position: relative;
+  }
+  
+  /* Icon inside the search box */
+  .search-box ion-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Message button styles */
+  .send-button {
+    flex: 0 1 10%; /* Takes up 10% of the width */
+    margin-left: 10px; /* Padding between the search box and the button */
+  }
+  
+  

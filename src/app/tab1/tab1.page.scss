@@ -13,6 +13,10 @@ ion-card {
   margin-right: 0;
 }
 
+ion-searchbar {
+  --box-shadow: none;
+}
+
 .school-name {
   font-weight: 500!important;
 }

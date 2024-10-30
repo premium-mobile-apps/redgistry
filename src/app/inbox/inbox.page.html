@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Inbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content color="light">
+  <ion-list [inset]="true">
+    <ion-item button detail="true" [routerLink]="['/inbox-message']" style="align-items: flex-start;">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label class="school-name">
+        <strong>Corey McLendon</strong>
+        <p>40 minutes ago</p><br>
+        <p>Hello! How are you...</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" [routerLink]="['/inbox-message']">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label class="school-name">
+        <strong>Silas Jefferson</strong>
+        <p>5 hours ago</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" [routerLink]="['/inbox-message']">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label class="school-name">
+        <strong>Jaelen Harrell</strong>
+        <p>18 hours ago</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" [routerLink]="['/inbox-message']">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label class="school-name">
+        <strong>Nene Shepherd</strong>
+        <p>1 day ago</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" [routerLink]="['/inbox-message']">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label class="school-name">
+        <strong>Mikhail Liston</strong>
+        <p>3 days ago</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" [routerLink]="['/inbox-message']">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label class="school-name">
+        <strong>Andrew Clark</strong>
+        <p>7 days ago</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item button detail="true" [routerLink]="['/inbox-message']">
+      <ion-avatar slot="start">
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label class="school-name">
+        <strong>Cameron Astley</strong>
+        <p>14 days ago</p>
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <div class="custom-tabs">
+    <ion-button [routerLink]="['/tabs/tab1']">
+      <div class="button-content">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab2']">
+      <div class="button-content">
+        <ion-icon name="school"></ion-icon>
+        <span>Schools</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab3']">
+      <div class="button-content">
+        <ion-icon name="menu"></ion-icon>
+        <span>Menu</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab4']">
+      <div class="button-content">
+        <ion-icon name="people"></ion-icon>
+        <span>Groups</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab5']">
+      <div class="button-content">
+        <ion-icon name="notifications"></ion-icon>
+        <span>Alerts</span>
+      </div>
+    </ion-button>
+  </div>
+</ion-content>

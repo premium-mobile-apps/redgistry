@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonIcon } from '@ionic/angular/standalone';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, IonModal } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab5',
@@ -11,5 +11,14 @@ import { IonicModule } from '@ionic/angular';
 })
 export class Tab5Page {
   constructor() {}
+
+  @ViewChild(IonModal)
+  modal!: IonModal;
+
+  name!: string;
+
+  cancel() {
+    this.modal.dismiss(null, 'cancel');
+  }
 
 }

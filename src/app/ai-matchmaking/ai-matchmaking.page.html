@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+    <ion-title>AI Matchmaking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+
+  <div class="card-stack">
+    <button class="swipe-button left" (click)="swipeLeft()" *ngIf="isDesktop">
+      <ion-icon name="chevron-back"></ion-icon>
+    </button>
+    <button class="swipe-button right" (click)="swipeRight()" *ngIf="isDesktop">
+      <ion-icon name="chevron-forward"></ion-icon>
+    </button>
+    <div *ngFor="let card of cards" class="card" (click)="openDetails(card)" #cardElem [style.backgroundImage]="'url(' + card.image + ')'">
+      <div class="card-content">
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-tabs">
+    <ion-button [routerLink]="['/tabs/tab1']">
+      <div class="button-content">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab2']">
+      <div class="button-content">
+        <ion-icon name="school"></ion-icon>
+        <span>Schools</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab3']">
+      <div class="button-content">
+        <ion-icon name="menu"></ion-icon>
+        <span>Menu</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab4']">
+      <div class="button-content">
+        <ion-icon name="people"></ion-icon>
+        <span>Groups</span>
+      </div>
+    </ion-button>
+    <ion-button [routerLink]="['/tabs/tab5']">
+      <div class="button-content">
+        <ion-icon name="notifications"></ion-icon>
+        <span>Alerts</span>
+      </div>
+    </ion-button>
+  </div>
+  
+</ion-content>

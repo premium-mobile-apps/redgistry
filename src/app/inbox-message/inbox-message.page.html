@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/inbox"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Chat</ion-title>  
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="chat-container">
+    <!-- Left side (person 1) -->
+    <div class="chat-bubble left">
+      <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Person 1" class="avatar">
+      <div class="bubble-content">
+        <p>Hello! How are you?</p>
+      </div>
+    </div>
+    
+    <!-- Right side (person 2) -->
+    <div class="chat-bubble right">
+      <img src="https://ionicframework.com/docs/img/demos/avatar.svg" alt="Person 2" class="avatar">
+      <div class="bubble-content">
+        <p>I’m good, thanks! And you?</p>
+      </div>
+    </div>
+
+    <!-- More chat bubbles here -->
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="search-container">
+    <div class="search-row">
+      <ion-input placeholder="Type a message..."></ion-input>
+
+      <ion-button fill="clear" class="send-button">
+        <ion-icon name="arrow-up-circle"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+</ion-footer>

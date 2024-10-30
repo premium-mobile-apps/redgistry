@@ -4,7 +4,7 @@
     <div class="search-row">
       <ion-searchbar></ion-searchbar>
 
-      <ion-button fill="clear" class="message-button">
+      <ion-button [routerLink]="['/inbox']" fill="clear" class="message-button">
         <ion-icon name="chatbubbles"></ion-icon>
       </ion-button>
     </div>
@@ -51,9 +51,9 @@
     <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
 
     <div class="social-button-container">
-      <ion-button size="small" fill="clear" color="secondary">
+      <ion-button  size="small" fill="clear" color="secondary" style="text-transform: none;" [ngStyle]="{'background-color': buttonColor}" (click)="toggleLike()">
         <ion-icon slot="start" name="heart"></ion-icon>
-        333k
+        {{ buttonText }}
       </ion-button>
       <ion-button size="small" fill="clear" color="secondary">
         <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>

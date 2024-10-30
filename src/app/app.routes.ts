@@ -46,4 +46,24 @@ export const routes: Routes = [
     path: 'ai-card-detail',
     loadComponent: () => import('./ai-card-detail/ai-card-detail.page').then( m => m.AICardDetailPage)
   },
+  {
+    path: 'inbox',
+    loadComponent: () => import('./inbox/inbox.page').then( m => m.InboxPage)
+  },
+  {
+    path: 'inbox-message',
+    loadComponent: () => import('./inbox-message/inbox-message.page').then( m => m.InboxMessagePage)
+  },
+  {
+    path: 'ai-matchmaking',
+    loadComponent: () => import('./ai-matchmaking/ai-matchmaking.page').then( m => m.AiMatchmakingPage)
+  },
+  {
+    path: 'settings',
+    loadComponent: () => import('./settings/settings.page').then( m => m.SettingsPage)
+  },
+  {
+    path: 'my-profile',
+    loadComponent: () => import('./my-profile/my-profile.page').then( m => m.MyProfilePage)
+  },
 ];

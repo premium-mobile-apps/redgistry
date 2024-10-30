@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
   IonContent, IonFooter, IonHeader, IonToolbar, IonTitle, IonIcon
 } from '@ionic/angular/standalone';
 import { RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, IonModal } from '@ionic/angular';
+
 
 
 
@@ -19,6 +20,9 @@ import { IonicModule } from '@ionic/angular';
     RouterModule, IonicModule, IonHeader, IonToolbar, IonTitle, IonIcon
   ]
 })
+
+
+
 export class SchoolProfilePage implements OnInit {
   selectedSegment: string = 'tab1';  // Initial value for the selected tab
   showFullContent = false;
@@ -43,6 +47,24 @@ export class SchoolProfilePage implements OnInit {
     this.isFollowing = !this.isFollowing;
     this.buttonText = this.isFollowing ? 'Unfollow' : 'Follow';
     this.buttonColor = this.isFollowing ? 'medium' : 'primary'; // Change colors as needed
+  }
+
+  @ViewChild(IonModal) modal!: IonModal;
+
+  name!: string;
+
+  cancel() {
+    this.modal.dismiss(null, 'cancel');
+  }
+
+  addLike = false;
+  likeButtonText = '33';
+  likeButtonColor = 'primary'; // Initial color
+
+  toggleLike() {
+    this.addLike = !this.addLike;
+    this.likeButtonText = this.addLike ? '34' : '33';
+    this.likeButtonColor = this.addLike ? 'medium' : 'primary'; // Change colors as needed
   }
 
 }

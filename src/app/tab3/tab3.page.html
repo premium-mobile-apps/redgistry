@@ -19,25 +19,61 @@
 
   <ion-list>
     <ion-item button detail="true">
-      <ion-label>My Profile</ion-label>
+      <ion-label [routerLink]="['/my-profile']">My Profile</ion-label>
     </ion-item>
     <ion-item button detail="true" routerLink="/parent-profile" routerDirection="forward">
       <ion-label>Parent Profile</ion-label>
     </ion-item>
-    <ion-item button detail="true">
-      <ion-label>Invite Parent</ion-label>
-    </ion-item>
+    <ion-item id="open-modal" button detail="true">Invite Parent</ion-item>
+    <ion-modal trigger="open-modal">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">
+                <ion-icon name="close"></ion-icon>
+              </ion-button>
+            </ion-buttons>
+            <ion-title>Invite Parent</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <div style="width: 90%;margin: auto;" class="content">
+            <ion-thumbnail style="margin-left: auto;margin-right: auto;margin-top: 33px;margin-bottom: 33px;width: 125px;height: 125px;">
+              <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/Redgistry_logo_blu_txt.png">
+            </ion-thumbnail>
+          
+            <h1 text-center margin-top>Invite your family to rEDgistry.</h1>
+        
+            <ion-item>
+              <ion-input  placeholder="Email" type="email"></ion-input>
+            </ion-item>
+        
+            <ion-item>
+              <ion-input label="Phone number" type="tel" placeholder="Enter a mobile number"></ion-input>
+            </ion-item>
+        
+          
+            <div style="text-align: center;padding-top: 15px;">
+              <ion-button style="width: 100%;" color="primary">
+                Send invite
+              </ion-button>
+            </div>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
     <ion-item button detail="true">
       <ion-label>Messages (coming soon)</ion-label>
     </ion-item>
     <ion-item button detail="true">
       <ion-label>Groups</ion-label>
     </ion-item>
-    <ion-item button detail="true">
-      <ion-label>Settings</ion-label>
+    <ion-item button detail="true" routerLink="/settings" routerDirection="forward">
+      <ion-label>Account settings</ion-label>
     </ion-item>
-    <ion-label style="margin-left: 15px;">
-      <strong>Help</strong>
+    <ion-label>
+      <h2 style="margin-top:10px;margin-left: 15px;"><strong>Help</strong></h2>
     </ion-label>
     <ion-item button detail="true">
       <ion-label>Terms of Service</ion-label>

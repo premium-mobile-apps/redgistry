@@ -15,18 +15,21 @@
     </div>
     <ion-grid>
       <ion-row>
-        <ion-col size="6">4-Year Private University</ion-col>
-        <ion-col style="text-align: right;" size="6">In state Tuition: $67,000</ion-col>
+        <ion-col size="6"><b>Four-Year University: </b>Private</ion-col>
+        <ion-col size="6"><b>In state Tuition: </b>$67,000</ion-col>
       </ion-row>
       <ion-row>
-        <ion-col size="6">Undergraduate Enrollment: 8,659</ion-col>
-        <ion-col style="text-align: right;" size="6">Out of state Tuition: $102,000</ion-col>
+        <ion-col size="6"><b>Undergraduate Enrollment: </b>8,659</ion-col>
+        <ion-col size="6"><b>Out of state Tuition: </b>$102,000</ion-col>
       </ion-row>
     </ion-grid>
 
-    <ion-button style="text-transform: none;display: flex;" [ngStyle]="{'background-color': buttonColor}" (click)="toggleFollow()">
-      {{ buttonText }}
-    </ion-button>
+    <div class="profile-follow-button">
+      <ion-button shape="round" style="width: 65%;text-transform: none;" [ngStyle]="{'background-color': buttonColor}" (click)="toggleFollow()">
+        {{ buttonText }}
+      </ion-button>
+    </div>
+
 
   </div>
 
@@ -57,7 +60,7 @@
   <div class="tab-content">
     <div *ngIf="selectedSegment === 'tab1'">
       <!-- Content for Tab 1 -->
-      <ion-card style="padding-bottom: 100px;">
+      <ion-card>
         <ion-item button detail="true" [routerLink]="['/school-profile']">
           <ion-avatar slot="start">
             <img alt="Silhouette of a person's head" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" />
@@ -82,12 +85,98 @@
           </a>
         </ion-card-content>
     
-        <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
-    
+        <div class="card-image-container">
+          <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
+        </div>
+
         <div class="social-button-container">
           <ion-button  size="small" fill="clear" color="secondary" style="text-transform: none;" [ngStyle]="{'background-color': likeButtonColor}" (click)="toggleLike()">
             <ion-icon slot="start" name="heart"></ion-icon>
             {{ likeButtonText }}
+          </ion-button>
+          <ion-button size="small" fill="clear" color="secondary">
+            <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
+            781
+          </ion-button>
+          <ion-button size="small" fill="clear" color="secondary">
+            <ion-icon slot="icon-only" name="bookmark"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card>
+
+      <ion-card>
+        <ion-item button detail="true" [routerLink]="['/school-profile']">
+          <ion-avatar slot="start">
+            <img alt="Silhouette of a person's head" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" />
+          </ion-avatar>
+          <ion-label class="school-name">
+            <strong>Northwestern University</strong>
+            <p>3 hour ago</p>
+          </ion-label>
+        </ion-item>
+        
+        <ion-card-content>
+          <p *ngIf="!showFullContent1">
+            The United Center stage is set: It's Commencement day for the Northwestern Class of 2024! 🎓💜...
+          </p>
+          <p *ngIf="showFullContent1">
+            The United Center stage is set: It's Commencement day for the Northwestern Class of 2024! 🎓💜 Tune in to the hashtag#NU2024 <a href="https://bit.ly/3RmvkcW" target="_blank">livestream at 10:30AM CT</a>
+          </p>
+          <a (click)="toggleContent1()" class="see-more-link">
+            {{ showFullContent1 ? 'See Less' : 'See More' }}
+          </a>
+        </ion-card-content>
+    
+        <div class="card-image-container">
+          <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post-1.png" />
+        </div>
+
+        <div class="social-button-container">
+          <ion-button  size="small" fill="clear" color="secondary" style="text-transform: none;" [ngStyle]="{'background-color': likeButtonColor1}" (click)="toggleLike1()">
+            <ion-icon slot="start" name="heart"></ion-icon>
+            {{ likeButtonText1 }}
+          </ion-button>
+          <ion-button size="small" fill="clear" color="secondary">
+            <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
+            781
+          </ion-button>
+          <ion-button size="small" fill="clear" color="secondary">
+            <ion-icon slot="icon-only" name="bookmark"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card>
+
+      <ion-card style="padding-bottom: 100px!important;">
+        <ion-item button detail="true" [routerLink]="['/school-profile']">
+          <ion-avatar slot="start">
+            <img alt="Silhouette of a person's head" src="https://www.northwestern.edu/brand/images/wordmark/guideline-sm4.gif" />
+          </ion-avatar>
+          <ion-label class="school-name">
+            <strong>Northwestern University</strong>
+            <p>6 hour ago</p>
+          </ion-label>
+        </ion-item>
+        
+        <ion-card-content>
+          <p *ngIf="!showFullContent2">
+            Northwestern graduate student—and amateur astrophotographer—Imran Sultan...
+          </p>
+          <p *ngIf="showFullContent2">
+            Northwestern graduate student—and amateur astrophotographer—Imran Sultan watched last week's solar eclipse from Millinocket, Maine, and captured these stunning images 📸✨
+          </p>
+          <a (click)="toggleContent2()" class="see-more-link">
+            {{ showFullContent2 ? 'See Less' : 'See More' }}
+          </a>
+        </ion-card-content>
+    
+        <div class="card-image-container">
+          <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post-2.png" />
+        </div>
+
+        <div class="social-button-container">
+          <ion-button  size="small" fill="clear" color="secondary" style="text-transform: none;" [ngStyle]="{'background-color': likeButtonColor2}" (click)="toggleLike2()">
+            <ion-icon slot="start" name="heart"></ion-icon>
+            {{ likeButtonText2 }}
           </ion-button>
           <ion-button size="small" fill="clear" color="secondary">
             <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
@@ -110,7 +199,14 @@
         </ion-card-header>
       
         <ion-card-content>
-          Northwestern University is a comprehensive research university that is deeply interdisciplinary across multiple schools and units. Our rigorous yet empathetic academic environment provides a robust mixture of theory and practice, with an emphasis on top-tier research, new knowledge, creative expression and practical application. northwestern provides both students and faculty exceptional opportunities for intellectual, personal, and professional growth in beautiful settings, With two campuses located on Lake Michigan: a 240-acre campus in Evanston, minutes North of Chicago, and a 25-acre campus in Downtown Chicago. If you are at Northwestern, you are part of an innovative, collaborative, and multidimensional community delivering an impact that is rare in higher education.
+          <p *ngIf="!showFullContent">
+            Northwestern University is a comprehensive research university that is deeply interdisciplinary across multiple schools and units. Our rigorous yet empathetic academic environment provides a robust mixture of theory and practice, with an emphasis on top-tier research, new knowledge,...          </p>
+          <p *ngIf="showFullContent">    
+            Northwestern University is a comprehensive research university that is deeply interdisciplinary across multiple schools and units. Our rigorous yet empathetic academic environment provides a robust mixture of theory and practice, with an emphasis on top-tier research, new knowledge, creative expression and practical application. northwestern provides both students and faculty exceptional opportunities for intellectual, personal, and professional growth in beautiful settings, With two campuses located on Lake Michigan: a 240-acre campus in Evanston, minutes North of Chicago, and a 25-acre campus in Downtown Chicago. If you are at Northwestern, you are part of an innovative, collaborative, and multidimensional community delivering an impact that is rare in higher education.
+          </p>
+          <a (click)="toggleContent()" class="see-more-link">
+            {{ showFullContent ? 'See Less' : 'See More' }}
+          </a>
         </ion-card-content>
       </ion-card>
 
@@ -145,7 +241,8 @@
                 <ion-col size="6" style="text-align: right;">$102,000</ion-col>
               </ion-row>
           </ion-grid>
-          <ion-list lines="none" style="padding-left: 0%;" class="padding">
+          <hr style="border: 1px;background-color: black;margin-left: 9px;margin-right: 9px;">
+          <ion-list lines="none" style="margin-left: -7px;">
             <ion-item>
               <ion-icon aria-hidden="true" name="open-outline" slot="end" color="secondary"></ion-icon>
               <ion-label><a href="https://admissions.northwestern.edu/" target="_blank" style="font-size: 14px;text-decoration: none;color: #7e4dff;">Visit School Admissions Page</a></ion-label>
@@ -216,7 +313,7 @@
           <ion-card-title>University Demographics</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <div class="pie-chart-container">
+          <!--<div class="pie-chart-container">
             <div class="pie-chart">
               <div class="slice slice-1"></div>
               <div class="slice slice-2"></div>
@@ -237,6 +334,9 @@
                 <span class="legend-color color-4"></span> 50% White
               </div>
             </div>
+          </div>-->
+          <div
+            id="demographicChart" style="width:100%; max-width:600px; height:500px;">
           </div>
         </ion-card-content>
       </ion-card>
@@ -266,8 +366,8 @@
     <div *ngIf="selectedSegment === 'tab3'">
       <!-- Content for Tab 3 -->
       <ion-list style="padding-bottom: 100px;">
-        <ion-item>
-          <ion-thumbnail slot="start">
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
             <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-1.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
@@ -279,8 +379,8 @@
           </ion-button>
         </ion-item>
       
-        <ion-item>
-          <ion-thumbnail slot="start">
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
             <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-2.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
@@ -292,8 +392,8 @@
           </ion-button>
         </ion-item>
       
-        <ion-item>
-          <ion-thumbnail slot="start">
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
             <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-3.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
@@ -304,13 +404,39 @@
             Follow
           </ion-button>
         </ion-item>
+
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-2.png" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Northwestern University - McCormick School of Engineering</strong></h2>
+            <p>The Kellogg School of Management at Northwestern University (branded as Northwestern Kellogg) is the business school of Northwestern University, a private research university in Evanston, Illinois. It was founded in 1908 as...</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Follow
+          </ion-button>
+        </ion-item>
+
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-affiliate-3.png" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Northwestern University - The Feinberg School of Medicine</strong></h2>
+            <p>The defining mission of Northwestern University Feinberg School of Medicine, a $1.1 billion enterprise located in the heart of Chicago, is to educate the next...</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Follow
+          </ion-button>
+        </ion-item>
       </ion-list>
     </div>
     <div *ngIf="selectedSegment === 'tab4'">
       <!-- Content for Tab 4 -->
       <ion-list style="padding-bottom: 100px;">
-        <ion-item>
-          <ion-thumbnail slot="start">
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
             <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-group-3.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
@@ -322,8 +448,8 @@
           </ion-button>
         </ion-item>
       
-        <ion-item>
-          <ion-thumbnail slot="start">
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
             <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-group-1.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
@@ -335,8 +461,8 @@
           </ion-button>
         </ion-item>
       
-        <ion-item>
-          <ion-thumbnail slot="start">
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
             <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-group-2.png" alt="Thumbnail">
           </ion-thumbnail>
           <ion-label>
@@ -347,36 +473,61 @@
             Join
           </ion-button>
         </ion-item>
+
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/biomedical-school-profile-group-img.png" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Biomedical Engineering Society</strong></h2>
+            <p>The Biomedical Engineering Society at Northwestern University brings together biomedical engineering students and faculty members to promote academic,...</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Join
+          </ion-button>
+        </ion-item>
+
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/blockchain-school-profile-group-img.png" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Blockchain Group</strong></h2>
+            <p>Northwestern University's Blockchain Group focuses on fostering an active blockchain technology ecosystem at Northwestern and the Chicago area...</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Join
+          </ion-button>
+        </ion-item>
+
+        <ion-item class="custom-item custom-item-border">
+          <ion-thumbnail slot="start" class="top-aligned-thumbnail">
+            <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/redgistry-consulting-school-profile-group-img.png" alt="Thumbnail">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>rED.gistry Consulting</strong></h2>
+            <p>Providing students with the opportunity to work on professional consulting projects while providing services to nonprofit organizations across the world helping millions of people.</p>
+          </ion-label>
+          <ion-button slot="end" fill="outline">
+            Join
+          </ion-button>
+        </ion-item>
       </ion-list>
     </div>
     <div *ngIf="selectedSegment === 'tab5'">
       <!-- Content for Tab 5 -->
-       <ion-list style="padding-bottom: 100px;">
-        <ion-item>
+      <ion-list style="padding-bottom: 100px;">
+        <ion-item *ngFor="let event of events">
           <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-1.png" style="background-color: white;"/>
+            <img [src]="event.image" [alt]="event.title" style="background-color: white;" />
           </ion-thumbnail>
-          <ion-toggle>
-            <ion-label style="margin-left: 8px;">Artificial Intelligence Innovation Summit</ion-label>
+          <ion-toggle [(ngModel)]="event.isAttending" (ionChange)="updateAttendance(event)">
+            <ion-label style="margin-left: 8px;">{{ event.title }}</ion-label>
+            <p style="margin-left: 8px;">{{ event.isAttending ? 'Attending' : 'Not Attending' }}</p>
           </ion-toggle>
         </ion-item>
-        <ion-item>
-          <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-3.png" style="background-color: white;"/>
-          </ion-thumbnail>
-          <ion-toggle>
-            <ion-label style="margin-left: 8px;">Women's Health Tech Wednesday</ion-label>
-          </ion-toggle>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail>
-            <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nw-school-events-2.png" style="background-color: white;"/>
-          </ion-thumbnail>
-          <ion-toggle>
-            <ion-label style="margin-left: 8px;">Best Practices for Networking on Zoom</ion-label>
-          </ion-toggle>
-        </ion-item>
-       </ion-list>
+      </ion-list>
+      
 
     </div>
     <div *ngIf="selectedSegment === 'tab6'">
@@ -412,7 +563,49 @@
         <ion-item color="light">APPLIED MATHEMATICS</ion-item>
         <ion-item>ARABIC</ion-item>
         <ion-item color="light">ARCHITECTURAL ENGINEERING AND DESIGN</ion-item>
-
+        <ion-item>ART HISTORY</ion-item>
+        <ion-item color="light">ARTS ADMINISTRATION</ion-item>
+        <ion-item>ART THEORY AND PRACTICE</ion-item>
+        <ion-item color="light">ASIAN AMERICAN STUDIES</ion-item>
+        <ion-item>ASIAN HUMANITIES</ion-item>
+        <ion-item color="light">ASIAN LANGUAGES AND CULTURES</ion-item>
+        <ion-item>BIOLOGICAL SCIENCES</ion-item>
+        <ion-item color="light">BIOMEDICAL ENGINEERING</ion-item>
+        <ion-item>BIOTECHNOLOGY AND BIOCHEMICAL ENGINEERING</ion-item>
+        <ion-item color="light">BLACK STUDIES</ion-item>
+        <ion-item>BUSINESS ENTERPRISE</ion-item>
+        <ion-item color="light">BUSINESS GERMAN</ion-item>
+        <ion-item>BUSINESS INSTITUTIONS</ion-item>
+        <ion-item color="light">CATHOLIC STUDIES</ion-item>
+        <ion-item>CENTRAL SOUTHEASTERN EUROPEAN STUDIES</ion-item>
+        <ion-item color="light">CHEMICAL ENGINEERING</ion-item>
+        <ion-item>CHEMISTRY</ion-item>
+        <ion-item color="light">CIVIC ENGAGEMENT</ion-item>
+        <ion-item>CIVIL ENGINEERING</ion-item>
+        <ion-item color="light">CLASSICS</ion-item>
+        <ion-item>COGNITIVE SCIENCE</ion-item>
+        <ion-item color="light">COMBINED ENGINEERING AND COMMUNICATION PROGRAM</ion-item>
+        <ion-item>COMBINED MUSIC & ENGINEERING PROGRAM</ion-item>
+        <ion-item color="light">COMBINED MUSIC AND COMMUNICATION PROGRAM</ion-item>
+        <ion-item>COMMUNICATION STUDIES</ion-item>
+        <ion-item color="light">COMPARATIVE LITERARY STUDIES</ion-item>
+        <ion-item>COMPUTER ENGINEERING</ion-item>
+        <ion-item color="light">COMPUTER SCIENCE (BS)</ion-item>
+        <ion-item>COMPUTER SCIENCE BA-CS</ion-item>
+        <ion-item color="light">COOPERATIVE ENGINEERING EDUCATION PROGRAM</ion-item>
+        <ion-item>CRITICAL THEORY</ion-item>
+        <ion-item color="light">DANCE</ion-item>
+        <ion-item>DATA SCIENCE</ion-item>
+        <ion-item color="light">EARTH AND PLANETARY SCIENCES</ion-item>
+        <ion-item>ECONOMICS</ion-item>
+        <ion-item color="light">ELECTRICAL ENGINEERING</ion-item>
+        <ion-item>ENGLISH: CREATIVE WRITING</ion-item>
+        <ion-item color="light">ENGLISH: CREATIVE WRITING (CROSS-GENRE)</ion-item>
+        <ion-item>ENGLISH: CREATIVE WRITING (SEQUENCE-BASED)</ion-item>
+        <ion-item color="light">ENGLISH: LITERATURE</ion-item>
+        <ion-item>ENTREPRENEURSHIP</ion-item>
+        <ion-item color="light">ENVIRONMENTAL ENGINEERING</ion-item>
+        
        </ion-list>
     </div>
   </div>

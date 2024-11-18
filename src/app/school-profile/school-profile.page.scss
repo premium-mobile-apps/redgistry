@@ -28,6 +28,10 @@
     margin-right: 0;
   }
 
+  ion-segment-button {
+    font-size: 11px;
+   }
+
   .custom-tabs {
     position: fixed;
     bottom: 0;
@@ -200,3 +204,38 @@
     line-height: 1.5;
   }
   
+  .card-image-container {
+    width: 100%;
+    max-height: 300px; /* Optional: adjust max height */
+    overflow: hidden;
+  }
+  
+  .card-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .profile-follow-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .custom-item {
+    align-items: center; /* Default center alignment for content */
+  }
+  
+  .top-aligned-thumbnail {
+    align-self: flex-start; /* Aligns the thumbnail to the top */
+  }
+  
+  .custom-item-border {
+    border-bottom: 1px solid #000; /* Custom separator line */
+  }
+  
+  
+  ion-list {
+    --inner-border-color: #000; /* Replace with your desired color */
+  }

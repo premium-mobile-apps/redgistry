@@ -23,17 +23,17 @@
   </div>
 
   <div class="nav-menu">
-    <a href="#" data-target="summary" (click)="scrollToSection($event)">Summary</a>
+    <a href="#" data-target="biography" (click)="scrollToSection($event)">Biography</a>
     <a href="#" data-target="achievements" (click)="scrollToSection($event)">Achievements</a>
     <a href="#" data-target="activities" (click)="scrollToSection($event)">Activities</a>
     <a href="#" data-target="experience" (click)="scrollToSection($event)">Experience</a>
     <a href="#" data-target="skills" (click)="scrollToSection($event)">Skills</a>
   </div>
 
-  <ion-card id="summary">
+  <ion-card id="biography">
     <ion-card-header>
       <ion-card-title style="font-style: italic;">
-        <h3><strong>SUMMARY</strong></h3>
+        <h3><strong>BIOGRAPHY</strong></h3>
       </ion-card-title>
     </ion-card-header>
   
@@ -48,24 +48,33 @@
         <h3 style="font-style: italic;text-transform: uppercase;"><strong>Academic Achievements & Awards</strong></h3>
       </ion-list-header>
       <ion-item>
-        <ion-label style="font-size: 18px;">
-          <strong><em>Scores</em></strong>
+        <ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="6">
+                <strong><em style="font-size: 18px;">Scores</em></strong>
+              </ion-col>
+              <ion-col size="6">
+                <strong><em style="font-size: 18px;">Interests/Hobbies</em></strong>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
           <ion-grid style="font-size: 15px!important;">
             <ion-row>
-              <ion-col size="6">GPA:</ion-col>
-              <ion-col size="6">3.97</ion-col>
+              <ion-col size="6">GPA: 3.97</ion-col>
+              <ion-col size="6">Architecture</ion-col>
             </ion-row>
             <ion-row>
-              <ion-col size="6">Class Rank:</ion-col>
-              <ion-col size="6">9 of 571</ion-col>
+              <ion-col size="6">Class Rank: 9 of 571</ion-col>
+              <ion-col size="6">Stock Trading</ion-col>
             </ion-row>
             <ion-row>
-              <ion-col size="6">SAT Score:</ion-col>
-              <ion-col size="6">N/A</ion-col>
+              <ion-col size="6">SAT Score: N/A</ion-col>
+              <ion-col size="6">Cryptocurrency</ion-col>
             </ion-row>
             <ion-row>
-              <ion-col size="6">ACT Score:</ion-col>
-              <ion-col size="6">32</ion-col>
+              <ion-col size="6">ACT Score: 32</ion-col>
+              <ion-col size="6"></ion-col>
             </ion-row>
           </ion-grid>
         </ion-label>
@@ -73,7 +82,7 @@
       <ion-list-header style="font-style: italic;font-size: 18px;">
         <strong>Award/Certification/Publication/Honor/Achievement</strong>
       </ion-list-header>
-      <ion-item class="school-item">
+      <ion-item style="align-items: flex-start;">
         <ion-thumbnail>
           <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/nha-logo.png" style="background-color: white;"/>
         </ion-thumbnail>
@@ -82,7 +91,7 @@
           <p>Member, 2023</p>
         </ion-label>
       </ion-item>
-      <ion-item>
+      <ion-item style="align-items: flex-start;">
         <ion-thumbnail>
           <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/il-math-science-logo.png" style="background-color: white;"/>
         </ion-thumbnail>
@@ -94,12 +103,12 @@
       <ion-list-header style="font-style: italic;font-size: 18px;">
         <strong>Additional Coursework</strong>
       </ion-list-header>
-      <ion-item class="school-item">
+      <ion-item class="school-item no-item-bottom-border" style="align-items: flex-start;">
         <ion-thumbnail>
           <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/chi-state-uni-logo.png" style="background-color: white;"/>
         </ion-thumbnail>
         <ion-label style="margin-left: 12px;">
-          <em>Future Astronauts Program</em>
+          <em>Future Banking Professionals Program</em>
           <p>Lake Forest College, Summer 2022</p>
         </ion-label>
       </ion-item>
@@ -111,7 +120,7 @@
       <ion-list-header>
           <h3 style="font-style: italic;text-transform: uppercase;"><strong>Co-Curricular and Extracurricular Activities</strong></h3>
       </ion-list-header>
-      <ion-item class="school-item">
+      <ion-item class="school-item" style="align-items: flex-start;">
         <ion-thumbnail>
           <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/alvin-logo.png" style="background-color: white;"/>
         </ion-thumbnail>
@@ -120,18 +129,18 @@
           <p>Member 2022-2023</p>
         </ion-label>
       </ion-item>
-      <ion-item class="school-item">
+      <ion-item class="school-item" style="align-items: flex-start;">
         <ion-thumbnail>
-          <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/mp-logo.png" style="background-color: white;"/>
+          <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/wp-logo.png" style="background-color: white;"/>
         </ion-thumbnail>
         <ion-label style="margin-left: 12px;">
           <em>Walter Payton High School Cheerleading, Chicago, Illinois</em>
           <p>Captain, 2022-2023; Member, 2021</p>
         </ion-label>
       </ion-item>
-      <ion-item class="school-item">
+      <ion-item class="school-item no-item-bottom-border" style="align-items: flex-start;">
         <ion-thumbnail>
-          <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/mp-logo.png" style="background-color: white;"/>
+          <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/wp-logo.png" style="background-color: white;"/>
         </ion-thumbnail>
         <ion-label style="margin-left: 12px;">
           <em>Walter Payton High School Cheerleading, Chicago, Illinois</em>
@@ -158,7 +167,7 @@
           <p>Perform other relevant banking responsibilities as needed</p>
         </ion-label>
       </ion-item>
-      <ion-item class="school-item" style="align-items: flex-start;">
+      <ion-item class="school-item no-item-bottom-border" style="align-items: flex-start;">
         <ion-thumbnail>
           <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/chicago-pub-library-logo.png" style="background-color: white;"/>
         </ion-thumbnail>
@@ -176,30 +185,17 @@
   <ion-card id="skills" style="padding-bottom:100px;">
     <ion-list>
       <ion-list-header>
-          <h2 style="font-style: italic;text-transform: uppercase;"><strong>Skills and Interests/Hobbies</strong></h2>
+          <h2 style="font-style: italic;text-transform: uppercase;"><strong>Skills</strong></h2>
       </ion-list-header>
       <ion-item>
        <ion-label>
-        <strong><em>Skills</em></strong>
-        <ul>
-          <li>Quantum Mathematics</li>
-          <li>Computer Programming</li>
-          <li>Critical Thinking</li>
-          <li>Intellectual Curiosity</li>
-          <li>Spanish (Fluent)</li>
-          <li>Italian (Conversational)</li>
-        </ul>
+          Quantum Mathematics<br>
+          Computer Programming<br>
+          Critical Thinking<br>
+          Intellectual Curiosity<br>
+          Spanish (Fluent)<br>
+          Italian (Conversational)
        </ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-label>
-          <strong><em>Interests/Hobbies</em></strong>
-          <ul>
-            <li>Architecture</li>
-            <li>Stock Trading</li>
-            <li>Cryptocurrency</li>
-          </ul>
-        </ion-label>
       </ion-item>
     </ion-list>
   </ion-card>

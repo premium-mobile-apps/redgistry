@@ -5,13 +5,13 @@
         <ion-icon slot="end" name="search-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title>ALERTS</ion-title>
+    <ion-title style="text-align: center;">ALERTS</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <iframe src="https://calendar.google.com/calendar/embed?src=jaelenharrell%40empyrealx.com&ctz=America%2FLos_Angeles" style="border: 0" width="100%" height="600" frameborder="0" scrolling="yes"></iframe>
-  <ion-button color="primary" fill="solid" id="open-modal" expand="block" style="width: 100%;">View as list<ion-icon slot="end" name="list"></ion-icon></ion-button>
+  <ion-button color="primary" fill="solid" shape="round" id="open-modal" expand="block" style="width: 100%;">View as list<ion-icon slot="end" name="list"></ion-icon></ion-button>
   <ion-modal trigger="open-modal">
     <ng-template>
       <ion-header>

@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title style="text-align: center;">
       Menu
     </ion-title>
   </ion-toolbar>
@@ -55,7 +55,7 @@
         
           
             <div style="text-align: center;padding-top: 15px;">
-              <ion-button style="width: 100%;" color="primary">
+              <ion-button style="width: 100%;" color="primary" shape="round">
                 Send invite
               </ion-button>
             </div>
@@ -63,12 +63,8 @@
         </ion-content>
       </ng-template>
     </ion-modal>
-    <ion-item button detail="true">
-      <ion-label>Messages (coming soon)</ion-label>
-    </ion-item>
-    <ion-item button detail="true">
-      <ion-label>Groups</ion-label>
-    </ion-item>
+
+
     <ion-item button detail="true" routerLink="/settings" routerDirection="forward">
       <ion-label>Account settings</ion-label>
     </ion-item>
@@ -84,8 +80,6 @@
     <ion-item button detail="true">
       <ion-label>Help Center</ion-label>
     </ion-item>
-    <ion-item button detail="true">
-      <ion-label>Tips and Tricks</ion-label>
-    </ion-item>
+
   </ion-list>
 </ion-content>

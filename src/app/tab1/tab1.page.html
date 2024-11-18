@@ -2,10 +2,10 @@
   <!-- Container above the toolbar -->
   <div class="search-container">
     <div class="search-row">
-      <ion-searchbar></ion-searchbar>
+      <ion-searchbar color="light"></ion-searchbar>
 
       <ion-button [routerLink]="['/inbox']" fill="clear" class="message-button">
-        <ion-icon name="chatbubbles"></ion-icon>
+        <ion-icon name="chatbubbles" size="large"></ion-icon>
       </ion-button>
     </div>
   </div>
@@ -48,16 +48,13 @@
       </a>
     </ion-card-content>
 
-    <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
-
+    <div class="card-image-container">
+      <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/northwestern-post.png" />
+    </div>
     <div class="social-button-container">
       <ion-button  size="small" fill="clear" color="secondary" style="text-transform: none;" [ngStyle]="{'background-color': buttonColor}" (click)="toggleLike()">
         <ion-icon slot="start" name="heart"></ion-icon>
         {{ buttonText }}
-      </ion-button>
-      <ion-button size="small" fill="clear" color="secondary">
-        <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
-        781
       </ion-button>
       <ion-button size="small" fill="clear" color="secondary">
         <ion-icon slot="icon-only" name="bookmark"></ion-icon>
@@ -89,17 +86,14 @@
       </a>
     </ion-card-content>
 
-
-    <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/stanford-timeline.jpeg" />
+    <div class="card-image-container">
+      <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/stanford-timeline.jpeg" />
+    </div>
 
     <div class="social-button-container">
       <ion-button size="small" fill="clear" color="secondary">
         <ion-icon slot="start" name="heart"></ion-icon>
         333k
-      </ion-button>
-      <ion-button size="small" fill="clear" color="secondary">
-        <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
-        781
       </ion-button>
       <ion-button size="small" fill="clear" color="secondary">
         <ion-icon slot="icon-only" name="bookmark"></ion-icon>
@@ -131,16 +125,14 @@
       </a>
     </ion-card-content>
 
-    <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/purdue-timeline.png" />
+    <div class="card-image-container">
+      <img alt="Silhouette of mountains" src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/purdue-timeline.png" />
+    </div>
 
     <div class="social-button-container">
       <ion-button size="small" fill="clear" color="secondary">
         <ion-icon slot="start" name="heart"></ion-icon>
         333k
-      </ion-button>
-      <ion-button size="small" fill="clear" color="secondary">
-        <ion-icon slot="start" name="chatbubble-ellipses"></ion-icon>
-        781
       </ion-button>
       <ion-button size="small" fill="clear" color="secondary">
         <ion-icon slot="icon-only" name="bookmark"></ion-icon>

@@ -1,0 +1,11 @@
+.no-item-bottom-border {
+    --border-color: transparent;
+  }
+  
+  .custom-item {
+    align-items: center; /* Default center alignment for content */
+  }
+  
+  .top-aligned-thumbnail {
+    align-self: flex-start; /* Aligns the thumbnail to the top */
+  }

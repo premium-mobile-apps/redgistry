@@ -19,32 +19,32 @@ export class Tab2Page implements OnInit {
   }
 
   isFollowing = false;
-  buttonText = 'Follow';
+  buttonText = 'Unfollow';
   buttonColor = 'primary'; // Initial color
 
   toggleFollow() {
     this.isFollowing = !this.isFollowing;
-    this.buttonText = this.isFollowing ? 'Unfollow' : 'Follow';
+    this.buttonText = this.isFollowing ? 'Follow' : 'Unfollow';
     this.buttonColor = this.isFollowing ? 'medium' : 'primary'; // Change colors as needed
   }
 
   isFollowing1 = false;
-  buttonText1 = 'Follow';
+  buttonText1 = 'Unfollow';
   buttonColor1 = 'primary'; // Initial color
 
   toggleFollow1() {
     this.isFollowing1 = !this.isFollowing1;
-    this.buttonText1 = this.isFollowing1 ? 'Unfollow' : 'Follow';
+    this.buttonText1 = this.isFollowing ? 'Follow' : 'Unfollow';
     this.buttonColor1 = this.isFollowing1 ? 'medium' : 'primary'; // Change colors as needed
   }
 
   isFollowing2 = false;
-  buttonText2 = 'Follow';
+  buttonText2 = 'Unfollow';
   buttonColor2 = 'primary'; // Initial color
 
   toggleFollow2() {
     this.isFollowing2 = !this.isFollowing2;
-    this.buttonText2 = this.isFollowing2 ? 'Unfollow' : 'Follow';
+    this.buttonText2 = this.isFollowing ? 'Follow' : 'Unfollow';
     this.buttonColor2 = this.isFollowing2 ? 'medium' : 'primary'; // Change colors as needed
   }
 

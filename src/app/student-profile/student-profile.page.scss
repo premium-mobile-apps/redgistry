@@ -1,6 +1,6 @@
 .banner-toolbar {
     background: url(https://i.ibb.co/qsknn8k/profile-heading.jpg) no-repeat fixed center / cover; 
-    margin-bottom: 225px;
+    margin-bottom: 260px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -15,6 +15,8 @@
     border-radius: 0px 20px;
     border: 3px solid white; /* Optional: border to highlight the profile image */
     margin-top: 50px; /* Adjust based on your toolbar height */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 ion-title {
@@ -88,6 +90,8 @@ margin-right: 0;
     display: flex; /* Flexbox to align items */
     justify-content: center; /* Center items horizontally */ 
     overflow-x: auto; /* Allows horizontal scrolling if needed */
+    box-shadow: 0 0px 7px #0003;
+    margin-top: 20px;
 }
   
   .nav-menu a {
@@ -100,6 +104,10 @@ margin-right: 0;
   
   .nav-menu a:hover {
     color: #4e0eff;
+  }
+
+  .nav-menu a.active {
+    border-bottom: 3px solid #4e0eff; /* Active link border */
   }
 
   /* Responsive adjustments */
@@ -123,3 +131,8 @@ margin-right: 0;
       margin: 0 5px; /* Further reduce space between links */
     }
   }
+
+  .no-item-bottom-border {
+    --border-color: transparent;
+  }
+  

@@ -24,7 +24,7 @@ ion-searchbar {
 /* Container with white background above the toolbar */
 .search-container {
   background-color: white;
-  padding: 10px; /* Adjust padding as needed */
+  padding: 5px; /* Adjust padding as needed */
 }
 
 /* Row containing the search box and message button */
@@ -104,3 +104,16 @@ ion-toolbar {
     cursor: pointer; /* Show a pointer cursor on hover */
     background-color: transparent; /* Transparent background */
   }
+
+  .card-image-container {
+    width: 100%;
+    max-height: 300px; /* Optional: adjust max height */
+    overflow: hidden;
+  }
+  
+  .card-image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  

@@ -8,7 +8,7 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 10px;
-    max-width: 75%;
+    max-width: 85%;
     word-wrap: break-word;
   }
   
@@ -38,15 +38,20 @@
   }*/
   
   .bubble-content {
-    background-color: #4600ff;
     padding: 10px;
-    border-radius: 10px;
-    color: white;
+    color: black;
+  }
+
+  .chat-formatting {
+    margin-block-start: 0em;
+  }
+
+  p {
+    margin-block-start: 0em;
   }
   
   .chat-bubble.right .bubble-content {
-    background-color: #0078ff;
-    color: white;
+    color: black;
   }
   
   ion-footer {

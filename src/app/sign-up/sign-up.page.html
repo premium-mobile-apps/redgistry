@@ -4,7 +4,7 @@
       <img src="https://raw.githubusercontent.com/premium-mobile-apps/redgistry/master/src/assets/images/Redgistry_logo_blu_txt.png">
     </ion-thumbnail>
   
-    <h1 text-center margin-top>Sign up</h1>
+    <h1 text-center margin-top style="font-weight: 900;">Sign up</h1>
     <h4>Command the next step in your education.</h4>
 
     <ion-item>
@@ -23,9 +23,13 @@
     <ion-item>
       <ion-input label="Confirm Password" placeholder="Enter your password again" type="password"></ion-input>
     </ion-item>
+
+    <ion-item lines="none">
+      <ion-checkbox slot="start" labelPlacement="end" aria-label="I am at least 13 years old">I am at least 13 years old</ion-checkbox>
+    </ion-item>
   
     <div style="text-align: center;padding-top: 15px;">
-      <ion-button style="width: 100%;" color="primary" [routerLink]="['/tabs/tab1']">
+      <ion-button style="width: 100%;" color="primary" [routerLink]="['/tabs/tab1']" shape="round">
         Sign up
       </ion-button>
     </div>
@@ -35,19 +39,19 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <ion-button color="light" style="width: 100%;">
+            <ion-button color="light" style="width: 100%;" shape="round">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/768px-Facebook_Logo_2023.png" class="social-icon" alt="Facebook" />
               Facebook
             </ion-button>
           </ion-col>
           <ion-col>
-            <ion-button color="light" style="width: 100%;">
+            <ion-button color="light" style="width: 100%;" shape="round">
               <img src="https://logopng.com.br/logos/google-37.svg" class="social-icon" alt="Google" />
               Google
             </ion-button>
           </ion-col>
         <ion-col>
-          <ion-button color="light" style="width: 100%;">
+          <ion-button color="light" style="width: 100%;" shape="round">
             <ion-icon slot="start" name="logo-apple" size="small"></ion-icon>
             Apple
           </ion-button>
@@ -59,7 +63,7 @@
   
     <div class="center-content">
       <p>Already have an account?
-        <a [routerLink]="['/login']" color="tertiary" class="sign-up-text-link"> Sign in</a>
+        <a [routerLink]="['/login']" color="primary" class="sign-up-text-link"> Sign in</a>
       </p>
     </div>
   
@@ -68,7 +72,7 @@
   <ion-footer class="ion-no-border welcome-footer">
     <div class="center-content-footer">
       <p>By creating an account, you agree to our
-        <a color="tertiary" class="footer-text-link"> User Agreement</a>
+        <a color="primary" class="footer-text-link"> User Agreement</a>
       </p>
     </div>
   </ion-footer>

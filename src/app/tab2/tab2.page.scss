@@ -1,62 +1,11 @@
-.card-stack {
-    position: relative;
-    width: 100%;
-    height: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; /* Add this to prevent overflow issues */
+ion-searchbar {
+  --box-shadow: none;
+}
 
-  }
-  
-  .card {
-    position: absolute;
-    width: 90%;
-    height: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background: white;
-    background-size: cover; /* Ensure the background image covers the entire card */
-    background-position: center; /* Center the background image */
-    color: white; /* Change text color for better readability */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    text-align: left;
-  }
-  
-  .card-content {
-    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background to the text for better readability */
-    padding: 10px;
-    border-radius: 0 0 10px 10px; /* Round the bottom corners */
-  }
+ion-thumbnail {
+  --border-radius: 50px;
+}
 
-  .swipe-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.5);
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
-  .swipe-button.left {
-    left: 10px;
-  }
-  
-  .swipe-button.right {
-    right: 10px;
-  }
-  
-  @media (max-width: 400px) {
-    .swipe-button {
-      display: none;
-    }
-  }
+.top-aligned-item {
+  align-items: flex-start;
+}

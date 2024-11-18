@@ -11,20 +11,26 @@
     --ion-color-primary-shade: #3100b3;
     --ion-color-primary-tint: #7e4dff;
 
-    --ion-color-secondary: #7e4dff;
+    --ion-color-secondary: #4600ff;
     --ion-color-secondary-rgb: 126,77,255;
     --ion-color-secondary-contrast: #ffffff;
     --ion-color-secondary-contrast-rgb: 255, 255, 255;
-    --ion-color-secondary-shade: #7e4dff;
-    --ion-color-secondary-tint: #7e4dff;
+    --ion-color-secondary-shade: #4600ff;
+    --ion-color-secondary-tint: #4600ff;
 
     --ion-background-color: white;
     --ion-background-color-rgb: 255, 255, 255;
     --ion-text-color: black;
     --ion-text-color-rgb: 0, 0, 0;
+    
+    --ion-default-font: 'Poppins', sans-serif !important;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
   }
+
+ion-card {
+    box-shadow: 0px 14px 1px rgba(0, 0, 0, 0.2)
+}
   
